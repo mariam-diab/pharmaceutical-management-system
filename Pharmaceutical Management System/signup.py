@@ -22,7 +22,7 @@ class SignupDialog(QDialog):
         result = mydatabase.mycursor.fetchone()
         if result:
             QMessageBox.warning(self, "Signup Error", "Username or email already exists")
-        elif not valid.is_valid_email(email):
+        elif not email_validity.is_valid_email(email):
             QMessageBox.warning(self, "Signup Error", "Invalid email address")
         else:
             query = "INSERT INTO users (username, email, password) VALUES (%s, %s, %s)"
