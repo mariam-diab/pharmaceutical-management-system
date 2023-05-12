@@ -28,6 +28,7 @@ class LoginDialog(QDialog, Ui_Dialog):
         self.close()
 
     def open_signup(self):
+        self.close()
         self.signup_dialog = signup.SignupDialog()
         self.signup_dialog.show()
 

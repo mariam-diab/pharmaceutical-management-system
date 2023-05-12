@@ -28,6 +28,7 @@ class SignupDialog(QDialog):
         if not validations.is_valid_password(password):
             self.ui.password_lineEdit.setStyleSheet("background-color: #FFB6C1")
             self.ui.signup_button.setEnabled(False)
+
         else:
             self.ui.password_lineEdit.setStyleSheet("")
             self.ui.signup_button.setEnabled(True)
