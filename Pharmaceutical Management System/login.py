@@ -4,7 +4,7 @@ from login_ui import Ui_Dialog
 import mydatabase
 import signup
 
-#TESYSTT
+
 class LoginDialog(QDialog, Ui_Dialog):
     def __init__(self):
         super().__init__()
@@ -28,9 +28,9 @@ class LoginDialog(QDialog, Ui_Dialog):
         self.close()
 
     def open_signup(self):
-        self.close()
         self.signup_dialog = signup.SignupDialog()
         self.signup_dialog.show()
+        self.close()
 
 
 if __name__ == '__main__':

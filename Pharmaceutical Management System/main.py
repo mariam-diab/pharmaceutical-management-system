@@ -8,12 +8,13 @@ from signup_ui import Ui_Dialog
 import mydatabase
 import validations
 from signup import SignupDialog
-from login import LoginDialog
+from welcome import WelcomeDialog
+
 
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    dialog = LoginDialog()
+    dialog = WelcomeDialog()
     dialog.show()
     sys.exit(app.exec_())

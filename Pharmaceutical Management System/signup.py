@@ -1,6 +1,7 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QDialog, QMessageBox
 from signup_ui import Ui_Dialog
+import login
 import mydatabase
 import validations
 
@@ -12,7 +13,9 @@ class SignupDialog(QDialog):
         self.ui.setupUi(self)
         self.ui.signup_button.clicked.connect(self.signup)
         self.ui.uname_line.textChanged.connect(self.check_username)
+        self.ui.signup_button_3.clicked.connect(self.open_login)
         self.ui.password_lineEdit.textChanged.connect(self.check_password)
+        self.login_dialog= None
 
     def check_username(self):
         username = self.ui.uname_line.text()
@@ -52,7 +55,10 @@ class SignupDialog(QDialog):
             mydatabase.db.commit()
             QMessageBox.information(self, "Signup Success", "User successfully registered")
             self.close()
-
+    def open_login(self):
+        self.login_dialog = login.LoginDialog()
+        self.login_dialog.show()
+        self.close()
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)

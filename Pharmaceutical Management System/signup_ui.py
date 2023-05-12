@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'signup.ui.txt'
+# Form implementation generated from reading ui file 'signup.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
@@ -16,44 +16,92 @@ class Ui_Dialog(object):
         Dialog.setObjectName("Dialog")
         Dialog.resize(740, 562)
         self.label = QtWidgets.QLabel(Dialog)
-        self.label.setGeometry(QtCore.QRect(130, 30, 471, 191))
+        self.label.setGeometry(QtCore.QRect(40, 20, 471, 191))
         font = QtGui.QFont()
-        font.setPointSize(40)
+        font.setFamily("PMingLiU-ExtB")
+        font.setPointSize(48)
+        font.setItalic(False)
         self.label.setFont(font)
         self.label.setObjectName("label")
         self.pass_label = QtWidgets.QLabel(Dialog)
         self.pass_label.setGeometry(QtCore.QRect(130, 290, 111, 61))
         font = QtGui.QFont()
-        font.setPointSize(15)
+        font.setFamily("PMingLiU-ExtB")
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setWeight(75)
         self.pass_label.setFont(font)
         self.pass_label.setObjectName("pass_label")
         self.u_name_label = QtWidgets.QLabel(Dialog)
-        self.u_name_label.setGeometry(QtCore.QRect(130, 230, 121, 21))
+        self.u_name_label.setGeometry(QtCore.QRect(130, 220, 121, 41))
         font = QtGui.QFont()
-        font.setPointSize(15)
+        font.setFamily("PMingLiU-ExtB")
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setWeight(75)
         self.u_name_label.setFont(font)
         self.u_name_label.setObjectName("u_name_label")
         self.signup_button = QtWidgets.QPushButton(Dialog)
-        self.signup_button.setGeometry(QtCore.QRect(350, 450, 111, 31))
+        self.signup_button.setGeometry(QtCore.QRect(270, 450, 111, 31))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.signup_button.setFont(font)
         self.signup_button.setObjectName("signup_button")
         self.uname_line = QtWidgets.QLineEdit(Dialog)
         self.uname_line.setGeometry(QtCore.QRect(280, 220, 281, 41))
+        self.uname_line.setStyleSheet("QLineEdit{\n"
+"    border:2px solid;\n"
+"    border-radius: 20px;\n"
+"    color: rgb(108, 112, 125);\n"
+"}")
         self.uname_line.setObjectName("uname_line")
         self.email_lineEdit = QtWidgets.QLineEdit(Dialog)
         self.email_lineEdit.setGeometry(QtCore.QRect(280, 300, 281, 41))
+        self.email_lineEdit.setStyleSheet("QLineEdit{\n"
+"    border:2px solid;\n"
+"    border-radius: 20px;\n"
+"    color: rgb(108, 112, 125);\n"
+"}")
         self.email_lineEdit.setObjectName("email_lineEdit")
         self.pass_label_2 = QtWidgets.QLabel(Dialog)
         self.pass_label_2.setGeometry(QtCore.QRect(130, 360, 111, 61))
         font = QtGui.QFont()
-        font.setPointSize(15)
+        font.setFamily("PMingLiU-ExtB")
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setWeight(75)
         self.pass_label_2.setFont(font)
         self.pass_label_2.setObjectName("pass_label_2")
         self.password_lineEdit = QtWidgets.QLineEdit(Dialog)
         self.password_lineEdit.setGeometry(QtCore.QRect(280, 370, 281, 41))
+        self.password_lineEdit.setStyleSheet("QLineEdit{\n"
+"    border:2px solid;\n"
+"    border-radius: 20px;\n"
+"    color: rgb(108, 112, 125);\n"
+"}")
         self.password_lineEdit.setObjectName("password_lineEdit")
+        self.label_2 = QtWidgets.QLabel(Dialog)
+        self.label_2.setGeometry(QtCore.QRect(0, 0, 831, 561))
+        self.label_2.setText("")
+        self.label_2.setPixmap(QtGui.QPixmap(":/newPrefix/plastic-bottle-pills.jpg"))
+        self.label_2.setScaledContents(True)
+        self.label_2.setObjectName("label_2")
+        self.signup_button_3 = QtWidgets.QPushButton(Dialog)
+        self.signup_button_3.setGeometry(QtCore.QRect(430, 450, 111, 31))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.signup_button_3.setFont(font)
+        self.signup_button_3.setObjectName("signup_button_3")
+        self.label_2.raise_()
+        self.label.raise_()
+        self.pass_label.raise_()
+        self.u_name_label.raise_()
+        self.signup_button.raise_()
+        self.uname_line.raise_()
+        self.email_lineEdit.raise_()
+        self.pass_label_2.raise_()
+        self.password_lineEdit.raise_()
+        self.signup_button_3.raise_()
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
@@ -61,8 +109,20 @@ class Ui_Dialog(object):
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
-        self.label.setText(_translate("Dialog", "Create account"))
-        self.pass_label.setText(_translate("Dialog", "Email"))
-        self.u_name_label.setText(_translate("Dialog", "Username"))
+        self.label.setText(_translate("Dialog", "<html><head/><body><p><span style=\" color:#ffffff;\">Create account</span></p></body></html>"))
+        self.pass_label.setText(_translate("Dialog", "<html><head/><body><p><span style=\" color:#ffffff;\">Email</span></p></body></html>"))
+        self.u_name_label.setText(_translate("Dialog", "<html><head/><body><p><span style=\" color:#ffffff;\">Username</span></p></body></html>"))
         self.signup_button.setText(_translate("Dialog", "Signup"))
-        self.pass_label_2.setText(_translate("Dialog", "Password"))
+        self.pass_label_2.setText(_translate("Dialog", "<html><head/><body><p><span style=\" color:#ffffff;\">Password</span></p></body></html>"))
+        self.signup_button_3.setText(_translate("Dialog", "Sign in"))
+import image_rc
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    Dialog = QtWidgets.QDialog()
+    ui = Ui_Dialog()
+    ui.setupUi(Dialog)
+    Dialog.show()
+    sys.exit(app.exec_())
