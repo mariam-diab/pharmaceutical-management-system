@@ -4,7 +4,7 @@ from login_ui import Ui_Dialog
 import mydatabase
 import signup
 
-
+#TESYSTT
 class LoginDialog(QDialog, Ui_Dialog):
     def __init__(self):
         super().__init__()
