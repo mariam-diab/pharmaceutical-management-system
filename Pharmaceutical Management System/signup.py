@@ -2,7 +2,8 @@ import sys
 from PyQt5.QtWidgets import QApplication, QDialog, QMessageBox
 from signup_ui import Ui_Dialog
 import mydatabase
-import email_validity
+import validations
+
 
 class SignupDialog(QDialog):
     def __init__(self):
@@ -10,7 +11,26 @@ class SignupDialog(QDialog):
         self.ui = Ui_Dialog()
         self.ui.setupUi(self)
         self.ui.signup_button.clicked.connect(self.signup)
+        self.ui.uname_line.textChanged.connect(self.check_username)
+        self.ui.password_lineEdit.textChanged.connect(self.check_password)
 
+    def check_username(self):
+        username = self.ui.uname_line.text()
+        if not username.isalnum():
+            self.ui.uname_line.setStyleSheet("background-color: #FFB6C1")
+            self.ui.signup_button.setEnabled(False)
+        else:
+            self.ui.uname_line.setStyleSheet("")
+            self.ui.signup_button.setEnabled(True)
+
+    def check_password(self):
+        password = self.ui.password_lineEdit.text()
+        if not validations.is_valid_password(password):
+            self.ui.password_lineEdit.setStyleSheet("background-color: #FFB6C1")
+            self.ui.signup_button.setEnabled(False)
+        else:
+            self.ui.password_lineEdit.setStyleSheet("")
+            self.ui.signup_button.setEnabled(True)
 
     def signup(self):
         username = self.ui.uname_line.text()
@@ -22,7 +42,7 @@ class SignupDialog(QDialog):
         result = mydatabase.mycursor.fetchone()
         if result:
             QMessageBox.warning(self, "Signup Error", "Username or email already exists")
-        elif not email_validity.is_valid_email(email):
+        elif not validations.is_valid_email(email):
             QMessageBox.warning(self, "Signup Error", "Invalid email address")
         else:
             query = "INSERT INTO users (username, email, password) VALUES (%s, %s, %s)"
