@@ -2,19 +2,26 @@
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
+
 import sys
-from PyQt5.QtWidgets import QApplication, QDialog, QMessageBox
+from PyQt5.QtWidgets import QApplication, QDialog, QMessageBox, QWidget, QVBoxLayout, QPushButton, QSizePolicy
+from PyQt5 import uic, QtWidgets
 from signup_ui import Ui_Dialog
 import mydatabase
 import validations
-from signup import SignupDialog
-from welcome import WelcomeDialog
-
-
+import login
+import signup
+import welcome
+import widget_manager
+from widget_manager import widget
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    dialog = WelcomeDialog()
-    dialog.show()
+    app = widget_manager.app
+    dialog = welcome.WelcomeDialog()
+    dialog.setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
+    widget.addWidget(dialog)
+    widget.setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
+    #widget.setFixedSize(700, 500)
+    widget.show()
     sys.exit(app.exec_())

@@ -4,7 +4,7 @@ from signup_ui import Ui_Dialog
 import login
 import mydatabase
 import validations
-
+from main import widget
 
 class SignupDialog(QDialog):
     def __init__(self):
@@ -15,7 +15,7 @@ class SignupDialog(QDialog):
         self.ui.uname_line.textChanged.connect(self.check_username)
         self.ui.signup_button_3.clicked.connect(self.open_login)
         self.ui.password_lineEdit.textChanged.connect(self.check_password)
-        self.login_dialog= None
+        self.login_dialog = None
 
     def check_username(self):
         username = self.ui.uname_line.text()
@@ -55,13 +55,16 @@ class SignupDialog(QDialog):
             mydatabase.db.commit()
             QMessageBox.information(self, "Signup Success", "User successfully registered")
             self.close()
+
     def open_login(self):
         self.login_dialog = login.LoginDialog()
-        self.login_dialog.show()
-        self.close()
+        widget.addWidget(self.login_dialog)
+        widget.setCurrentIndex(widget.currentIndex()+1)
 
-if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    dialog = SignupDialog()
-    dialog.show()
-    sys.exit(app.exec_())
+
+#
+# if __name__ == '__main__':
+#     app = QApplication(sys.argv)
+#     dialog = SignupDialog()
+#     dialog.show()
+#     sys.exit(app.exec_())
