@@ -54,7 +54,7 @@
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>120</x>
+     <x>240</x>
      <y>230</y>
      <width>181</width>
      <height>61</height>
@@ -79,7 +79,7 @@
   <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
-     <x>120</x>
+     <x>240</x>
      <y>360</y>
      <width>181</width>
      <height>61</height>
@@ -104,7 +104,7 @@
   <widget class="QLabel" name="Welcome_2">
    <property name="geometry">
     <rect>
-     <x>70</x>
+     <x>190</x>
      <y>310</y>
      <width>101</width>
      <height>51</height>
@@ -114,7 +114,6 @@
     <font>
      <family>PMingLiU-ExtB</family>
      <pointsize>48</pointsize>
-     <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
@@ -122,6 +121,31 @@
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; color:#ffffff;&quot;&gt;New user?&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>761</width>
+     <height>551</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="img/image.qrc">:/newPrefix/start.jpg</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <zorder>label_2</zorder>
+  <zorder>label</zorder>
+  <zorder>Welcome</zorder>
+  <zorder>pushButton</zorder>
+  <zorder>pushButton_2</zorder>
+  <zorder>Welcome_2</zorder>
  </widget>
  <resources>
   <include location="img/image.qrc"/>

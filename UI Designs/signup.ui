@@ -46,7 +46,6 @@
     <font>
      <family>PMingLiU-ExtB</family>
      <pointsize>16</pointsize>
-     <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
@@ -67,7 +66,6 @@
     <font>
      <family>PMingLiU-ExtB</family>
      <pointsize>16</pointsize>
-     <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
@@ -140,7 +138,6 @@
     <font>
      <family>PMingLiU-ExtB</family>
      <pointsize>16</pointsize>
-     <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
@@ -202,6 +199,26 @@
     <string>Sign in</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>761</width>
+     <height>561</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="img/image.qrc">:/newPrefix/start.jpg</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <zorder>label_3</zorder>
   <zorder>label_2</zorder>
   <zorder>label</zorder>
   <zorder>pass_label</zorder>
