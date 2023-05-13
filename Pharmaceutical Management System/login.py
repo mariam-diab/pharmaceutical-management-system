@@ -3,6 +3,7 @@ from PyQt5.QtWidgets import QApplication, QDialog, QMessageBox
 from login_ui import Ui_Dialog
 import mydatabase
 import signup
+import start
 
 
 class LoginDialog(QDialog, Ui_Dialog):
@@ -12,6 +13,12 @@ class LoginDialog(QDialog, Ui_Dialog):
         self.login_btn.clicked.connect(self.login)
         self.signu_btn.clicked.connect(self.open_signup)
         self.signup_dialog = None
+        self.start_dialog = None
+
+    def open_start(self):
+        self.start_dialog = start.StartDialog()
+        self.start_dialog.show()
+        self.close()
 
     def login(self):
         username = self.username_lineEdit.text()
@@ -22,6 +29,7 @@ class LoginDialog(QDialog, Ui_Dialog):
         result = mydatabase.mycursor.fetchone()
         if result:
             QMessageBox.information(self, "Login Success", "Login successful!")
+            self.open_start()
         else:
             QMessageBox.warning(self, "Login Error", "Invalid username or password")
         mydatabase.db.close()
