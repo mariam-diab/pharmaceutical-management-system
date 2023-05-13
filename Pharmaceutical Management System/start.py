@@ -1,25 +1,22 @@
+import sys
 from PyQt5.QtWidgets import QApplication, QDialog, QMessageBox
 from start_ui import Ui_Dialog
+import signup
+import login
 import user_data
+import widget_manager
 from widget_manager import widget
 import welcome
-import addToStock
-
 
 class StartDialog(QDialog, Ui_Dialog):
     def __init__(self):
         super().__init__()
         self.ui = Ui_Dialog()
         self.ui.setupUi(self)
-        #self.ui.tabWidget.setCurrentIndex(0)
-        self.ui.label_5.setText(user_data.name)
-        self.ui.label_5.setStyleSheet("color: white;border-radius: 20px; border-color:rgb(0, 0, 0); background-image: url(:/newPrefix/start2.jpg); font-size: 28pt; text-align:center;")
+        self.ui.homeName.setText(user_data.name)
+        self.ui.homeName.setStyleSheet("color: white;border-radius: 20px; border-color:rgb(0, 0, 0); background-image: url(:/newPrefix/start2.jpg); font-size: 28pt; text-align:center;")
         self.welcomeScreen = None
-        self.StockScreen = None
         self.ui.Signout.clicked.connect(self.signOut)
-        self.ui.signup_button_8.clicked.connect(self.addToStock)
-        self.ui.signup_button_5.clicked.connect(self.print)
-        self.ui.signup_button_4.clicked.connect(self.printorder)
 
     def signOut(self):
         self.welcomeScreen = welcome.WelcomeDialog()
@@ -27,16 +24,6 @@ class StartDialog(QDialog, Ui_Dialog):
         widget.setCurrentIndex(widget.currentIndex() + 1)
         QMessageBox.information(self, "Sign out", "Sign Out successful!")
 
-    def addToStock(self):
-        self.StockScreen = addToStock.StockDialog()
-        widget.addWidget(self.StockScreen)
-        widget.setCurrentIndex(widget.currentIndex() + 1)
-
-    def print(self):
-        QMessageBox.information(self, "print", "Printing.....")
-
-    def printorder(self):
-        QMessageBox.information(self, "print", "Printing.....")
 
 
 
@@ -44,3 +31,12 @@ class StartDialog(QDialog, Ui_Dialog):
 
 
 
+
+
+
+# if __name__ == "__main__":
+#     app = QApplication(sys.argv)
+#     dialog = StartDialog()
+#     dialog.show()
+#     sys.exit(app.exec_())
+#
