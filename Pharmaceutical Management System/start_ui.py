@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(1275, 844)
+        Dialog.resize(1275, 834)
         self.tabWidget = QtWidgets.QTabWidget(Dialog)
         self.tabWidget.setGeometry(QtCore.QRect(-10, 0, 1290, 861))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
@@ -32,7 +32,7 @@ class Ui_Dialog(object):
         self.tab = QtWidgets.QWidget()
         self.tab.setObjectName("tab")
         self.label = QtWidgets.QLabel(self.tab)
-        self.label.setGeometry(QtCore.QRect(-90, 0, 1451, 811))
+        self.label.setGeometry(QtCore.QRect(-100, -10, 1451, 811))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -43,7 +43,7 @@ class Ui_Dialog(object):
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
         self.Welcome = QtWidgets.QLabel(self.tab)
-        self.Welcome.setGeometry(QtCore.QRect(430, 10, 261, 81))
+        self.Welcome.setGeometry(QtCore.QRect(390, 10, 261, 81))
         font = QtGui.QFont()
         font.setFamily("Calibri")
         font.setPointSize(48)
@@ -54,22 +54,25 @@ class Ui_Dialog(object):
         self.homeTable.setGeometry(QtCore.QRect(20, 190, 831, 521))
         self.homeTable.setObjectName("homeTable")
         self.homeTotal = QtWidgets.QLineEdit(self.tab)
-        self.homeTotal.setGeometry(QtCore.QRect(960, 650, 141, 61))
+        self.homeTotal.setGeometry(QtCore.QRect(930, 640, 141, 61))
         self.homeTotal.setStyleSheet("QLineEdit{\n"
 "    border-radius: 20px;\n"
 "    border-color:rgb(0, 0, 0);\n"
 "}")
         self.homeTotal.setObjectName("homeTotal")
         self.homeName = QtWidgets.QLineEdit(self.tab)
-        self.homeName.setGeometry(QtCore.QRect(650, 30, 191, 51))
+        self.homeName.setGeometry(QtCore.QRect(630, 20, 221, 61))
+        font = QtGui.QFont()
+        font.setPointSize(28)
+        self.homeName.setFont(font)
         self.homeName.setStyleSheet("QLineEdit{\n"
 "    border-radius: 20px;\n"
-"    border-color:rgb(0, 0, 0);\n"
+"    color:rgb(255, 255, 255);\n"
 "    background-image: url(:/newPrefix/start2.jpg);}")
-        self.homeName.setObjectName("homeName")
         self.homeName.setAlignment(QtCore.Qt.AlignCenter)
+        self.homeName.setObjectName("homeName")
         self.Welcome_3 = QtWidgets.QLabel(self.tab)
-        self.Welcome_3.setGeometry(QtCore.QRect(820, 570, 261, 81))
+        self.Welcome_3.setGeometry(QtCore.QRect(790, 550, 261, 81))
         font = QtGui.QFont()
         font.setFamily("Calibri")
         font.setPointSize(48)
@@ -83,6 +86,12 @@ class Ui_Dialog(object):
         self.Welcome_7.setFont(font)
         self.Welcome_7.setAlignment(QtCore.Qt.AlignCenter)
         self.Welcome_7.setObjectName("Welcome_7")
+        self.Signout = QtWidgets.QPushButton(self.tab)
+        self.Signout.setGeometry(QtCore.QRect(1060, 20, 131, 61))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.Signout.setFont(font)
+        self.Signout.setObjectName("Signout")
         self.tabWidget.addTab(self.tab, "")
         self.tab_2 = QtWidgets.QWidget()
         self.tab_2.setObjectName("tab_2")
@@ -283,8 +292,10 @@ class Ui_Dialog(object):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
         self.Welcome.setText(_translate("Dialog", "<html><head/><body><p><span style=\" font-size:28pt; font-weight:600; color:#ffffff;\">Welcome</span></p></body></html>"))
+        self.homeName.setText(_translate("Dialog", "fhsdfjs"))
         self.Welcome_3.setText(_translate("Dialog", "<html><head/><body><p><span style=\" font-size:28pt; font-weight:600; color:#ffffff;\">Total</span></p></body></html>"))
         self.Welcome_7.setText(_translate("Dialog", "<html><head/><body><p><span style=\" font-size:28pt; font-weight:600; color:#ffffff;\">Today\'s Purchases</span></p></body></html>"))
+        self.Signout.setText(_translate("Dialog", "Sign out"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("Dialog", "Home"))
         self.Welcome_5.setText(_translate("Dialog", "<html><head/><body><p><span style=\" font-size:22pt; color:#ffffff;\">Customer name</span></p></body></html>"))
         self.Welcome_6.setText(_translate("Dialog", "<html><head/><body><p><span style=\" font-size:22pt; color:#ffffff;\">Mobile number</span></p></body></html>"))

@@ -19,9 +19,7 @@ from widget_manager import widget
 if __name__ == '__main__':
     app = widget_manager.app
     dialog = welcome.WelcomeDialog()
-    #dialog.setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
     widget.addWidget(dialog)
-    #widget.setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
     widget.setFixedSize(1251, 811)
     widget.show()
     sys.exit(app.exec_())
