@@ -19,6 +19,7 @@ class StartDialog(QDialog, Ui_Dialog):
         self.ui.Signout.clicked.connect(self.signOut)
         self.ui.signup_button_8.clicked.connect(self.addToStock)
         self.ui.signup_button_5.clicked.connect(self.print)
+        self.ui.signup_button_4.clicked.connect(self.printorder)
 
     def signOut(self):
         self.welcomeScreen = welcome.WelcomeDialog()
@@ -33,6 +34,10 @@ class StartDialog(QDialog, Ui_Dialog):
 
     def print(self):
         QMessageBox.information(self, "print", "Printing.....")
+
+    def printorder(self):
+        QMessageBox.information(self, "print", "Printing.....")
+
 
 
 
