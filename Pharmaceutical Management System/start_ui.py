@@ -67,6 +67,7 @@ class Ui_Dialog(object):
 "    border-color:rgb(0, 0, 0);\n"
 "    background-image: url(:/newPrefix/start2.jpg);}")
         self.homeName.setObjectName("homeName")
+        self.homeName.setAlignment(QtCore.Qt.AlignCenter)
         self.Welcome_3 = QtWidgets.QLabel(self.tab)
         self.Welcome_3.setGeometry(QtCore.QRect(820, 570, 261, 81))
         font = QtGui.QFont()
@@ -275,7 +276,7 @@ class Ui_Dialog(object):
         self.tabWidget.raise_()
 
         self.retranslateUi(Dialog)
-        self.tabWidget.setCurrentIndex(2)
+        self.tabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
     def retranslateUi(self, Dialog):

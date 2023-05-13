@@ -6,6 +6,9 @@ import mydatabase
 import signup
 import start
 from main import widget
+import user_data
+
+from user_data import name
 
 class LoginDialog(QDialog, Ui_Dialog):
     def __init__(self):
@@ -21,6 +24,7 @@ class LoginDialog(QDialog, Ui_Dialog):
         self.start_dialog = start.StartDialog()
         widget.addWidget(self.start_dialog)
         widget.setCurrentIndex(widget.currentIndex()+1)
+
     def login(self):
         username = self.username_lineEdit.text()
         password = self.password_lineEdit.text()
@@ -30,7 +34,9 @@ class LoginDialog(QDialog, Ui_Dialog):
         result = mydatabase.mycursor.fetchone()
         if result:
             QMessageBox.information(self, "Login Success", "Login successful!")
+            user_data.name = username
             self.open_start()
+
         else:
             QMessageBox.warning(self, "Login Error", "Invalid username or password")
         mydatabase.db.close()
