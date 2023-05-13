@@ -4,7 +4,7 @@
 
 
 import sys
-from PyQt5.QtWidgets import QApplication, QDialog, QMessageBox, QWidget, QVBoxLayout, QPushButton, QSizePolicy
+from PyQt5.QtWidgets import QApplication, QDialog, QMessageBox, QWidget, QVBoxLayout, QPushButton, QSizePolicy, QMainWindow
 from PyQt5 import uic, QtWidgets
 from signup_ui import Ui_Dialog
 import mydatabase
@@ -20,6 +20,7 @@ if __name__ == '__main__':
     app = widget_manager.app
     dialog = welcome.WelcomeDialog()
     widget.addWidget(dialog)
+    widget.setWindowTitle("Pharmaceutical Management System")
     widget.setFixedSize(1251, 811)
     widget.show()
     sys.exit(app.exec_())

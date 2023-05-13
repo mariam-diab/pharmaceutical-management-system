@@ -1,5 +1,5 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QDialog
+from PyQt5.QtWidgets import QApplication, QDialog,QMainWindow
 from PyQt5 import uic, QtWidgets
 from welcome_ui import Ui_Dialog
 import signup
@@ -10,11 +10,12 @@ from widget_manager import widget
 
 
 
-class WelcomeDialog(QDialog, Ui_Dialog):
+class WelcomeDialog(QDialog, Ui_Dialog, QMainWindow):
     def __init__(self):
         super().__init__()
         self.ui = Ui_Dialog()
         self.ui.setupUi(self)
+        self.setWindowTitle("Pharmaceutical application")
         self.ui.pushButton.clicked.connect(self.openlogin)
         self.ui.pushButton_2.clicked.connect(self.opensignup)
         self.signup_dialog = None

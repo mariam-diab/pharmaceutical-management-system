@@ -1,5 +1,5 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QDialog, QMessageBox
+from PyQt5.QtWidgets import QApplication, QDialog, QMessageBox, QMainWindow
 from PyQt5 import uic, QtWidgets
 from signup_ui import Ui_Dialog
 import mydatabase
