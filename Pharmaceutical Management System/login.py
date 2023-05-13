@@ -1,4 +1,6 @@
+import sys
 from PyQt5.QtWidgets import QApplication, QDialog, QMessageBox
+from PyQt5 import uic, QtWidgets
 from login_ui import Ui_Dialog
 import mydatabase
 import signup
@@ -6,6 +8,7 @@ import start
 from main import widget
 import user_data
 
+from user_data import name
 
 class LoginDialog(QDialog, Ui_Dialog):
     def __init__(self):
@@ -44,3 +47,15 @@ class LoginDialog(QDialog, Ui_Dialog):
         widget.addWidget(self.signup_dialog)
         widget.setCurrentIndex(widget.currentIndex()+1)
 
+#
+# if __name__ == '__main__':
+#     app = QApplication(sys.argv)
+#     widget = QtWidgets.QStackedWidget()
+#     dialog = LoginDialog()
+#     dialog2 = signup.SignupDialog()
+#     widget.addWidget(dialog)
+#     widget.addWidget(dialog2)
+#     widget.setFixedSize(700, 500)
+#     widget.show()
+#     #dialog.show()
+#     sys.exit(app.exec_())
