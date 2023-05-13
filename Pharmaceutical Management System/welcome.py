@@ -1,11 +1,7 @@
-import sys
 from PyQt5.QtWidgets import QApplication, QDialog,QMainWindow
-from PyQt5 import uic, QtWidgets
 from welcome_ui import Ui_Dialog
 import signup
 import login
-import main
-import widget_manager
 from widget_manager import widget
 
 
@@ -33,12 +29,3 @@ class WelcomeDialog(QDialog, Ui_Dialog, QMainWindow):
         widget.setCurrentIndex(widget.currentIndex() + 1)
 
 
-# if __name__ == "__main__":
-#     app = QApplication(sys.argv)
-#     widget = QtWidgets.QStackedWidget()
-#     dialog = WelcomeDialog()
-#     #dialog.show()
-#     widget.addWidget(dialog)
-#     widget.setFixedSize(700, 500)
-#     widget.show()
-#     sys.exit(app.exec_())

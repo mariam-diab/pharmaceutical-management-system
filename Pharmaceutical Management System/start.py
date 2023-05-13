@@ -1,12 +1,9 @@
-import sys
 from PyQt5.QtWidgets import QApplication, QDialog, QMessageBox
 from start_ui import Ui_Dialog
-import signup
-import login
 import user_data
-import widget_manager
 from widget_manager import widget
 import welcome
+
 
 class StartDialog(QDialog, Ui_Dialog):
     def __init__(self):
@@ -33,10 +30,3 @@ class StartDialog(QDialog, Ui_Dialog):
 
 
 
-
-# if __name__ == "__main__":
-#     app = QApplication(sys.argv)
-#     dialog = StartDialog()
-#     dialog.show()
-#     sys.exit(app.exec_())
-#

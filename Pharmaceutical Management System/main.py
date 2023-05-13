@@ -4,13 +4,6 @@
 
 
 import sys
-from PyQt5.QtWidgets import QApplication, QDialog, QMessageBox, QWidget, QVBoxLayout, QPushButton, QSizePolicy, QMainWindow
-from PyQt5 import uic, QtWidgets
-from signup_ui import Ui_Dialog
-import mydatabase
-import validations
-import login
-import signup
 import welcome
 import widget_manager
 from widget_manager import widget

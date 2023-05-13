@@ -62,9 +62,3 @@ class SignupDialog(QDialog):
         widget.setCurrentIndex(widget.currentIndex()+1)
 
 
-#
-# if __name__ == '__main__':
-#     app = QApplication(sys.argv)
-#     dialog = SignupDialog()
-#     dialog.show()
-#     sys.exit(app.exec_())
