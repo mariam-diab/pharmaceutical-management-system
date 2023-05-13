@@ -6,39 +6,26 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>735</width>
-    <height>539</height>
+    <width>1252</width>
+    <height>808</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>-10</y>
-     <width>741</width>
-     <height>551</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap resource="img/image.qrc">:/newPrefix/plastic-bottle-pills.jpg</pixmap>
-   </property>
-   <property name="scaledContents">
-    <bool>true</bool>
-   </property>
-  </widget>
   <widget class="QLabel" name="Welcome">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>60</y>
-     <width>321</width>
-     <height>101</height>
+     <x>430</x>
+     <y>160</y>
+     <width>481</width>
+     <height>141</height>
     </rect>
    </property>
    <property name="font">
@@ -48,14 +35,14 @@
     </font>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Welcome&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:72pt; color:#ffffff;&quot;&gt;Welcome&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>240</x>
-     <y>230</y>
+     <x>580</x>
+     <y>360</y>
      <width>181</width>
      <height>61</height>
     </rect>
@@ -79,8 +66,8 @@
   <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
-     <x>240</x>
-     <y>360</y>
+     <x>580</x>
+     <y>490</y>
      <width>181</width>
      <height>61</height>
     </rect>
@@ -104,8 +91,8 @@
   <widget class="QLabel" name="Welcome_2">
    <property name="geometry">
     <rect>
-     <x>190</x>
-     <y>310</y>
+     <x>530</x>
+     <y>440</y>
      <width>101</width>
      <height>51</height>
     </rect>
@@ -114,6 +101,7 @@
     <font>
      <family>PMingLiU-ExtB</family>
      <pointsize>48</pointsize>
+     <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
@@ -126,8 +114,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>761</width>
-     <height>551</height>
+     <width>1251</width>
+     <height>811</height>
     </rect>
    </property>
    <property name="text">
@@ -141,7 +129,6 @@
    </property>
   </widget>
   <zorder>label_2</zorder>
-  <zorder>label</zorder>
   <zorder>Welcome</zorder>
   <zorder>pushButton</zorder>
   <zorder>pushButton_2</zorder>

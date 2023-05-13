@@ -15,6 +15,7 @@ class LoginDialog(QDialog, Ui_Dialog):
         self.signu_btn.clicked.connect(self.open_signup)
         self.signup_dialog = None
         self.start_dialog = None
+        self.username = None
 
     def open_start(self):
         self.start_dialog = start.StartDialog()

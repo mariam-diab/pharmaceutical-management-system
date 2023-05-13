@@ -5,11 +5,13 @@ import signup
 import login
 
 
+
 class StartDialog(QDialog, Ui_Dialog):
     def __init__(self):
         super().__init__()
         self.ui = Ui_Dialog()
         self.ui.setupUi(self)
+
 
 
 if __name__ == "__main__":

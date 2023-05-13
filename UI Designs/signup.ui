@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>740</width>
-    <height>562</height>
+    <width>1250</width>
+    <height>813</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,8 +16,8 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>20</y>
+     <x>420</x>
+     <y>90</y>
      <width>471</width>
      <height>191</height>
     </rect>
@@ -36,8 +36,8 @@
   <widget class="QLabel" name="pass_label">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>290</y>
+     <x>420</x>
+     <y>380</y>
      <width>111</width>
      <height>61</height>
     </rect>
@@ -46,6 +46,7 @@
     <font>
      <family>PMingLiU-ExtB</family>
      <pointsize>16</pointsize>
+     <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
@@ -56,8 +57,8 @@
   <widget class="QLabel" name="u_name_label">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>220</y>
+     <x>420</x>
+     <y>310</y>
      <width>121</width>
      <height>41</height>
     </rect>
@@ -66,6 +67,7 @@
     <font>
      <family>PMingLiU-ExtB</family>
      <pointsize>16</pointsize>
+     <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
@@ -76,10 +78,10 @@
   <widget class="QPushButton" name="signup_button">
    <property name="geometry">
     <rect>
-     <x>270</x>
-     <y>450</y>
-     <width>111</width>
-     <height>31</height>
+     <x>590</x>
+     <y>550</y>
+     <width>121</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="font">
@@ -94,10 +96,10 @@
   <widget class="QLineEdit" name="uname_line">
    <property name="geometry">
     <rect>
-     <x>280</x>
-     <y>220</y>
-     <width>281</width>
-     <height>41</height>
+     <x>570</x>
+     <y>300</y>
+     <width>311</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -111,10 +113,10 @@
   <widget class="QLineEdit" name="email_lineEdit">
    <property name="geometry">
     <rect>
-     <x>280</x>
-     <y>300</y>
-     <width>281</width>
-     <height>41</height>
+     <x>570</x>
+     <y>380</y>
+     <width>311</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -128,8 +130,8 @@
   <widget class="QLabel" name="pass_label_2">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>360</y>
+     <x>420</x>
+     <y>450</y>
      <width>111</width>
      <height>61</height>
     </rect>
@@ -138,6 +140,7 @@
     <font>
      <family>PMingLiU-ExtB</family>
      <pointsize>16</pointsize>
+     <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
@@ -148,10 +151,10 @@
   <widget class="QLineEdit" name="password_lineEdit">
    <property name="geometry">
     <rect>
-     <x>280</x>
-     <y>370</y>
-     <width>281</width>
-     <height>41</height>
+     <x>570</x>
+     <y>460</y>
+     <width>311</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -162,32 +165,13 @@
 }</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>831</width>
-     <height>561</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap resource="img/image.qrc">:/newPrefix/plastic-bottle-pills.jpg</pixmap>
-   </property>
-   <property name="scaledContents">
-    <bool>true</bool>
-   </property>
-  </widget>
   <widget class="QPushButton" name="signup_button_3">
    <property name="geometry">
     <rect>
-     <x>430</x>
-     <y>450</y>
-     <width>111</width>
-     <height>31</height>
+     <x>750</x>
+     <y>550</y>
+     <width>121</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="font">
@@ -204,8 +188,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>761</width>
-     <height>561</height>
+     <width>1251</width>
+     <height>811</height>
     </rect>
    </property>
    <property name="text">
@@ -219,7 +203,6 @@
    </property>
   </widget>
   <zorder>label_3</zorder>
-  <zorder>label_2</zorder>
   <zorder>label</zorder>
   <zorder>pass_label</zorder>
   <zorder>u_name_label</zorder>

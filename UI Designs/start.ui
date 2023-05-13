@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1052</width>
-    <height>718</height>
+    <width>1275</width>
+    <height>844</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,10 +16,10 @@
   <widget class="QTabWidget" name="tabWidget">
    <property name="geometry">
     <rect>
-     <x>0</x>
+     <x>-10</x>
      <y>0</y>
-     <width>1121</width>
-     <height>731</height>
+     <width>1290</width>
+     <height>861</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -50,9 +50,15 @@ font-color: rgb(255, 28, 244);
       <rect>
        <x>-90</x>
        <y>0</y>
-       <width>1151</width>
-       <height>701</height>
+       <width>1451</width>
+       <height>811</height>
       </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
      </property>
      <property name="text">
       <string/>
@@ -67,7 +73,7 @@ font-color: rgb(255, 28, 244);
     <widget class="QLabel" name="Welcome">
      <property name="geometry">
       <rect>
-       <x>300</x>
+       <x>430</x>
        <y>10</y>
        <width>261</width>
        <height>81</height>
@@ -90,39 +96,17 @@ font-color: rgb(255, 28, 244);
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>140</y>
-       <width>741</width>
+       <y>190</y>
+       <width>831</width>
        <height>521</height>
       </rect>
-     </property>
-    </widget>
-    <widget class="QLabel" name="Welcome_4">
-     <property name="geometry">
-      <rect>
-       <x>800</x>
-       <y>690</y>
-       <width>121</width>
-       <height>51</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>PMingLiU-ExtB</family>
-       <pointsize>48</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt; color:#ffffff;&quot;&gt;Total&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
      </property>
     </widget>
     <widget class="QLineEdit" name="homeTotal">
      <property name="geometry">
       <rect>
-       <x>830</x>
-       <y>580</y>
+       <x>960</x>
+       <y>650</y>
        <width>141</width>
        <height>61</height>
       </rect>
@@ -137,7 +121,7 @@ font-color: rgb(255, 28, 244);
     <widget class="QLineEdit" name="homeName">
      <property name="geometry">
       <rect>
-       <x>520</x>
+       <x>650</x>
        <y>30</y>
        <width>191</width>
        <height>51</height>
@@ -150,33 +134,11 @@ font-color: rgb(255, 28, 244);
 	background-image: url(:/newPrefix/start2.jpg);}</string>
      </property>
     </widget>
-    <widget class="QLabel" name="Welcome_2">
-     <property name="geometry">
-      <rect>
-       <x>1020</x>
-       <y>710</y>
-       <width>261</width>
-       <height>81</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>PMingLiU-ExtB</family>
-       <pointsize>48</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:28pt; font-weight:600; color:#ffffff;&quot;&gt;Welcome&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
     <widget class="QLabel" name="Welcome_3">
      <property name="geometry">
       <rect>
-       <x>690</x>
-       <y>510</y>
+       <x>820</x>
+       <y>570</y>
        <width>261</width>
        <height>81</height>
       </rect>
@@ -198,8 +160,8 @@ font-color: rgb(255, 28, 244);
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>60</y>
-       <width>291</width>
+       <y>110</y>
+       <width>391</width>
        <height>81</height>
       </rect>
      </property>
@@ -223,8 +185,8 @@ font-color: rgb(255, 28, 244);
     <widget class="QLineEdit" name="ordersMobile">
      <property name="geometry">
       <rect>
-       <x>730</x>
-       <y>30</y>
+       <x>300</x>
+       <y>140</y>
        <width>281</width>
        <height>51</height>
       </rect>
@@ -239,8 +201,8 @@ font-color: rgb(255, 28, 244);
     <widget class="QLabel" name="Welcome_5">
      <property name="geometry">
       <rect>
-       <x>-30</x>
-       <y>20</y>
+       <x>-10</x>
+       <y>30</y>
        <width>301</width>
        <height>71</height>
       </rect>
@@ -252,7 +214,7 @@ font-color: rgb(255, 28, 244);
       </font>
      </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt; color:#ffffff;&quot;&gt;Customer name&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt; color:#ffffff;&quot;&gt;Customer name&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -261,8 +223,8 @@ font-color: rgb(255, 28, 244);
     <widget class="QLabel" name="Welcome_6">
      <property name="geometry">
       <rect>
-       <x>480</x>
-       <y>30</y>
+       <x>0</x>
+       <y>140</y>
        <width>281</width>
        <height>51</height>
       </rect>
@@ -274,7 +236,7 @@ font-color: rgb(255, 28, 244);
       </font>
      </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt; color:#ffffff;&quot;&gt;Mobile number&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt; color:#ffffff;&quot;&gt;Mobile number&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -284,9 +246,9 @@ font-color: rgb(255, 28, 244);
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>260</y>
-       <width>1021</width>
-       <height>331</height>
+       <y>350</y>
+       <width>911</width>
+       <height>301</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -300,7 +262,7 @@ border: 1px solid black;
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>180</y>
+       <y>270</y>
        <width>221</width>
        <height>71</height>
       </rect>
@@ -321,8 +283,8 @@ border: 1px solid black;
     <widget class="QLineEdit" name="startShift_3">
      <property name="geometry">
       <rect>
-       <x>120</x>
-       <y>190</y>
+       <x>130</x>
+       <y>280</y>
        <width>341</width>
        <height>51</height>
       </rect>
@@ -338,7 +300,7 @@ border: 1px solid black;
      <property name="geometry">
       <rect>
        <x>650</x>
-       <y>200</y>
+       <y>290</y>
        <width>111</width>
        <height>31</height>
       </rect>
@@ -347,6 +309,7 @@ border: 1px solid black;
       <font>
        <family>Calibri</family>
        <pointsize>12</pointsize>
+       <weight>50</weight>
        <bold>false</bold>
       </font>
      </property>
@@ -358,7 +321,7 @@ border: 1px solid black;
      <property name="geometry">
       <rect>
        <x>-10</x>
-       <y>600</y>
+       <y>690</y>
        <width>171</width>
        <height>51</height>
       </rect>
@@ -380,7 +343,7 @@ border: 1px solid black;
      <property name="geometry">
       <rect>
        <x>130</x>
-       <y>600</y>
+       <y>690</y>
        <width>121</width>
        <height>51</height>
       </rect>
@@ -396,7 +359,7 @@ border: 1px solid black;
      <property name="geometry">
       <rect>
        <x>300</x>
-       <y>610</y>
+       <y>700</y>
        <width>121</width>
        <height>41</height>
       </rect>
@@ -405,6 +368,7 @@ border: 1px solid black;
       <font>
        <family>Calibri</family>
        <pointsize>12</pointsize>
+       <weight>50</weight>
        <bold>false</bold>
       </font>
      </property>
@@ -415,9 +379,9 @@ border: 1px solid black;
     <widget class="QLineEdit" name="ordersName">
      <property name="geometry">
       <rect>
-       <x>240</x>
-       <y>30</y>
-       <width>261</width>
+       <x>300</x>
+       <y>40</y>
+       <width>271</width>
        <height>51</height>
       </rect>
      </property>
@@ -432,7 +396,7 @@ border: 1px solid black;
      <property name="geometry">
       <rect>
        <x>500</x>
-       <y>200</y>
+       <y>290</y>
        <width>111</width>
        <height>31</height>
       </rect>
@@ -441,6 +405,7 @@ border: 1px solid black;
       <font>
        <family>Calibri</family>
        <pointsize>12</pointsize>
+       <weight>50</weight>
        <bold>false</bold>
       </font>
      </property>
@@ -451,10 +416,10 @@ border: 1px solid black;
     <widget class="QLabel" name="label_3">
      <property name="geometry">
       <rect>
-       <x>-20</x>
+       <x>-40</x>
        <y>-30</y>
-       <width>1111</width>
-       <height>721</height>
+       <width>1321</width>
+       <height>851</height>
       </rect>
      </property>
      <property name="text">
@@ -490,8 +455,8 @@ border: 1px solid black;
       <rect>
        <x>-40</x>
        <y>-20</y>
-       <width>1121</width>
-       <height>711</height>
+       <width>1321</width>
+       <height>821</height>
       </rect>
      </property>
      <property name="text">
@@ -523,15 +488,15 @@ border: 1px solid black;
     <widget class="QLabel" name="Welcome_10">
      <property name="geometry">
       <rect>
-       <x>-30</x>
-       <y>10</y>
+       <x>0</x>
+       <y>0</y>
        <width>301</width>
        <height>71</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>PMingLiU-ExtB</family>
+       <family>Calibri</family>
        <pointsize>48</pointsize>
       </font>
      </property>
@@ -554,6 +519,7 @@ border: 1px solid black;
      <property name="font">
       <font>
        <pointsize>12</pointsize>
+       <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
@@ -565,7 +531,7 @@ border: 1px solid black;
      <property name="geometry">
       <rect>
        <x>60</x>
-       <y>80</y>
+       <y>70</y>
        <width>341</width>
        <height>51</height>
       </rect>
@@ -581,15 +547,16 @@ border: 1px solid black;
      <property name="geometry">
       <rect>
        <x>440</x>
-       <y>90</y>
-       <width>111</width>
-       <height>31</height>
+       <y>80</y>
+       <width>131</width>
+       <height>41</height>
       </rect>
      </property>
      <property name="font">
       <font>
        <family>Calibri</family>
        <pointsize>12</pointsize>
+       <weight>50</weight>
        <bold>false</bold>
       </font>
      </property>
@@ -600,16 +567,17 @@ border: 1px solid black;
     <widget class="QPushButton" name="signup_button_8">
      <property name="geometry">
       <rect>
-       <x>590</x>
-       <y>90</y>
-       <width>111</width>
-       <height>31</height>
+       <x>600</x>
+       <y>80</y>
+       <width>151</width>
+       <height>41</height>
       </rect>
      </property>
      <property name="font">
       <font>
        <family>Calibri</family>
        <pointsize>12</pointsize>
+       <weight>50</weight>
        <bold>false</bold>
       </font>
      </property>
@@ -620,16 +588,17 @@ border: 1px solid black;
     <widget class="QPushButton" name="signup_button_9">
      <property name="geometry">
       <rect>
-       <x>730</x>
-       <y>90</y>
-       <width>130</width>
-       <height>31</height>
+       <x>770</x>
+       <y>80</y>
+       <width>171</width>
+       <height>41</height>
       </rect>
      </property>
      <property name="font">
       <font>
        <family>Calibri</family>
        <pointsize>12</pointsize>
+       <weight>50</weight>
        <bold>false</bold>
       </font>
      </property>
@@ -644,8 +613,8 @@ border: 1px solid black;
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1111</width>
-     <height>731</height>
+     <width>1301</width>
+     <height>811</height>
     </rect>
    </property>
    <property name="text">

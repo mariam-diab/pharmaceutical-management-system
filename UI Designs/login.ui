@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>739</width>
-    <height>543</height>
+    <width>1248</width>
+    <height>805</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,8 +19,8 @@
   <widget class="QLabel" name="u_name_label">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>260</y>
+     <x>330</x>
+     <y>330</y>
      <width>121</width>
      <height>31</height>
     </rect>
@@ -29,6 +29,7 @@
     <font>
      <family>PMingLiU-ExtB</family>
      <pointsize>16</pointsize>
+     <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
@@ -39,8 +40,8 @@
   <widget class="QLabel" name="pass_label">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>320</y>
+     <x>340</x>
+     <y>410</y>
      <width>111</width>
      <height>61</height>
     </rect>
@@ -49,6 +50,7 @@
     <font>
      <family>PMingLiU-ExtB</family>
      <pointsize>16</pointsize>
+     <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
@@ -59,10 +61,10 @@
   <widget class="QPushButton" name="login_btn">
    <property name="geometry">
     <rect>
-     <x>272</x>
-     <y>417</y>
-     <width>111</width>
-     <height>31</height>
+     <x>480</x>
+     <y>480</y>
+     <width>151</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="font">
@@ -77,10 +79,10 @@
   <widget class="QPushButton" name="signu_btn">
    <property name="geometry">
     <rect>
-     <x>410</x>
-     <y>417</y>
-     <width>111</width>
-     <height>31</height>
+     <x>670</x>
+     <y>480</y>
+     <width>151</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="font">
@@ -95,10 +97,10 @@
   <widget class="QLineEdit" name="username_lineEdit">
    <property name="geometry">
     <rect>
-     <x>250</x>
-     <y>260</y>
-     <width>281</width>
-     <height>41</height>
+     <x>480</x>
+     <y>310</y>
+     <width>371</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -112,10 +114,10 @@
   <widget class="QLineEdit" name="password_lineEdit">
    <property name="geometry">
     <rect>
-     <x>250</x>
-     <y>330</y>
-     <width>281</width>
-     <height>41</height>
+     <x>480</x>
+     <y>400</y>
+     <width>371</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -129,8 +131,8 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>40</y>
+     <x>420</x>
+     <y>110</y>
      <width>431</width>
      <height>151</height>
     </rect>
@@ -144,15 +146,24 @@
    <property name="text">
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Login &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
   </widget>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>761</width>
-     <height>551</height>
+     <width>1251</width>
+     <height>811</height>
     </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
    </property>
    <property name="text">
     <string/>
