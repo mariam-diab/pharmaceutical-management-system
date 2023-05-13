@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>start3.jpg</file>
+    <file>start2.jpg</file>
+    <file>start.jpg</file>
+    <file>start.jpg</file>
+    <file>A_black_image.jpg</file>
+  </qresource>
+</RCC>
