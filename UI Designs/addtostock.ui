@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1304</width>
+    <height>848</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1321</width>
+     <height>851</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="img/image.qrc">:/newPrefix/start.jpg</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Welcome_10">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>140</y>
+     <width>301</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>48</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt; color:#ffffff;&quot;&gt;Drugs name&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="ordersName_2">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>150</y>
+     <width>341</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+	border-radius: 20px;
+	border-color:rgb(0, 0, 0);
+}</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="ordersName_3">
+   <property name="geometry">
+    <rect>
+     <x>860</x>
+     <y>270</y>
+     <width>341</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+	border-radius: 20px;
+	border-color:rgb(0, 0, 0);
+}</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Welcome_11">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>250</y>
+     <width>301</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>48</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt; color:#ffffff;&quot;&gt;Expiry date&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Welcome_12">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>140</y>
+     <width>301</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>48</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt; color:#ffffff;&quot;&gt;Provider&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="ordersName_4">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>270</y>
+     <width>341</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+	border-radius: 20px;
+	border-color:rgb(0, 0, 0);
+}</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>440</y>
+     <width>1001</width>
+     <height>371</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTableWidget {
+    border: 1px solid black;
+    font-size: 16px;
+}
+
+QHeaderView::section {
+    background-color: #f0f0f0;
+    border: 1px solid rgb(15, 12, 107);
+    font-weight: bold;
+    font-size: 18px;
+	color: black;
+}
+</string>
+   </property>
+   <attribute name="horizontalHeaderDefaultSectionSize">
+    <number>250</number>
+   </attribute>
+   <attribute name="verticalHeaderMinimumSectionSize">
+    <number>50</number>
+   </attribute>
+   <attribute name="verticalHeaderDefaultSectionSize">
+    <number>50</number>
+   </attribute>
+   <column>
+    <property name="text">
+     <string>Drug name</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Provider</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Quantity </string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Expiry date</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QLabel" name="Welcome_13">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>260</y>
+     <width>301</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>48</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt; color:#ffffff;&quot;&gt;Quantity&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="ordersName_5">
+   <property name="geometry">
+    <rect>
+     <x>860</x>
+     <y>150</y>
+     <width>341</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+	border-radius: 20px;
+	border-color:rgb(0, 0, 0);
+}</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="signup_button_8">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>350</y>
+     <width>171</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>16</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Add drug</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="signup_button_9">
+   <property name="geometry">
+    <rect>
+     <x>720</x>
+     <y>350</y>
+     <width>171</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>16</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Remove drug</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Welcome_14">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>0</y>
+     <width>631</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>72</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:48pt; color:#ffffff;&quot;&gt;Add item to stock&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="back">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>131</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>16</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Back</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="img/image.qrc"/>
+  <include location="../../../../../Windows/system32/img/image.qrc"/>
+ </resources>
+ <connections/>
+</ui>

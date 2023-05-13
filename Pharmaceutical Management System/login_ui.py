@@ -14,10 +14,10 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(1248, 805)
+        Dialog.resize(1286, 837)
         Dialog.setAutoFillBackground(False)
         self.u_name_label = QtWidgets.QLabel(Dialog)
-        self.u_name_label.setGeometry(QtCore.QRect(330, 330, 121, 31))
+        self.u_name_label.setGeometry(QtCore.QRect(370, 390, 121, 31))
         font = QtGui.QFont()
         font.setFamily("PMingLiU-ExtB")
         font.setPointSize(16)
@@ -26,7 +26,7 @@ class Ui_Dialog(object):
         self.u_name_label.setFont(font)
         self.u_name_label.setObjectName("u_name_label")
         self.pass_label = QtWidgets.QLabel(Dialog)
-        self.pass_label.setGeometry(QtCore.QRect(340, 410, 111, 61))
+        self.pass_label.setGeometry(QtCore.QRect(380, 470, 111, 61))
         font = QtGui.QFont()
         font.setFamily("PMingLiU-ExtB")
         font.setPointSize(16)
@@ -35,19 +35,19 @@ class Ui_Dialog(object):
         self.pass_label.setFont(font)
         self.pass_label.setObjectName("pass_label")
         self.login_btn = QtWidgets.QPushButton(Dialog)
-        self.login_btn.setGeometry(QtCore.QRect(480, 480, 151, 41))
+        self.login_btn.setGeometry(QtCore.QRect(520, 540, 151, 41))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.login_btn.setFont(font)
         self.login_btn.setObjectName("login_btn")
         self.signu_btn = QtWidgets.QPushButton(Dialog)
-        self.signu_btn.setGeometry(QtCore.QRect(670, 480, 151, 41))
+        self.signu_btn.setGeometry(QtCore.QRect(710, 540, 151, 41))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.signu_btn.setFont(font)
         self.signu_btn.setObjectName("signu_btn")
         self.username_lineEdit = QtWidgets.QLineEdit(Dialog)
-        self.username_lineEdit.setGeometry(QtCore.QRect(480, 310, 371, 61))
+        self.username_lineEdit.setGeometry(QtCore.QRect(520, 370, 371, 61))
         self.username_lineEdit.setStyleSheet("QLineEdit{\n"
 "    border:2px solid;\n"
 "    border-radius: 20px;\n"
@@ -55,7 +55,7 @@ class Ui_Dialog(object):
 "}")
         self.username_lineEdit.setObjectName("username_lineEdit")
         self.password_lineEdit = QtWidgets.QLineEdit(Dialog)
-        self.password_lineEdit.setGeometry(QtCore.QRect(480, 400, 371, 61))
+        self.password_lineEdit.setGeometry(QtCore.QRect(520, 460, 371, 61))
         self.password_lineEdit.setStyleSheet("QLineEdit{\n"
 "    border:2px solid;\n"
 "    border-radius: 20px;\n"
@@ -63,7 +63,7 @@ class Ui_Dialog(object):
 "}")
         self.password_lineEdit.setObjectName("password_lineEdit")
         self.label = QtWidgets.QLabel(Dialog)
-        self.label.setGeometry(QtCore.QRect(420, 110, 431, 151))
+        self.label.setGeometry(QtCore.QRect(460, 170, 431, 151))
         font = QtGui.QFont()
         font.setFamily("PMingLiU-ExtB")
         font.setPointSize(72)
@@ -71,7 +71,7 @@ class Ui_Dialog(object):
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
         self.label_2 = QtWidgets.QLabel(Dialog)
-        self.label_2.setGeometry(QtCore.QRect(0, 0, 1251, 811))
+        self.label_2.setGeometry(QtCore.QRect(0, 0, 1311, 851))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)

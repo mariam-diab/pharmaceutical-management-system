@@ -7,7 +7,6 @@ import signup
 import start
 from main import widget
 import user_data
-
 from user_data import name
 
 class LoginDialog(QDialog, Ui_Dialog):

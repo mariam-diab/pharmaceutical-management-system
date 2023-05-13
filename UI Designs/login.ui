@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1248</width>
-    <height>805</height>
+    <width>1286</width>
+    <height>837</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,8 +19,8 @@
   <widget class="QLabel" name="u_name_label">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>330</y>
+     <x>370</x>
+     <y>390</y>
      <width>121</width>
      <height>31</height>
     </rect>
@@ -40,8 +40,8 @@
   <widget class="QLabel" name="pass_label">
    <property name="geometry">
     <rect>
-     <x>340</x>
-     <y>410</y>
+     <x>380</x>
+     <y>470</y>
      <width>111</width>
      <height>61</height>
     </rect>
@@ -61,8 +61,8 @@
   <widget class="QPushButton" name="login_btn">
    <property name="geometry">
     <rect>
-     <x>480</x>
-     <y>480</y>
+     <x>520</x>
+     <y>540</y>
      <width>151</width>
      <height>41</height>
     </rect>
@@ -79,8 +79,8 @@
   <widget class="QPushButton" name="signu_btn">
    <property name="geometry">
     <rect>
-     <x>670</x>
-     <y>480</y>
+     <x>710</x>
+     <y>540</y>
      <width>151</width>
      <height>41</height>
     </rect>
@@ -97,8 +97,8 @@
   <widget class="QLineEdit" name="username_lineEdit">
    <property name="geometry">
     <rect>
-     <x>480</x>
-     <y>310</y>
+     <x>520</x>
+     <y>370</y>
      <width>371</width>
      <height>61</height>
     </rect>
@@ -114,8 +114,8 @@
   <widget class="QLineEdit" name="password_lineEdit">
    <property name="geometry">
     <rect>
-     <x>480</x>
-     <y>400</y>
+     <x>520</x>
+     <y>460</y>
      <width>371</width>
      <height>61</height>
     </rect>
@@ -131,8 +131,8 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>420</x>
-     <y>110</y>
+     <x>460</x>
+     <y>170</y>
      <width>431</width>
      <height>151</height>
     </rect>
@@ -155,8 +155,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1251</width>
-     <height>811</height>
+     <width>1311</width>
+     <height>851</height>
     </rect>
    </property>
    <property name="sizePolicy">

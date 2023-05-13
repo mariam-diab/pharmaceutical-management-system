@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(1252, 808)
+        Dialog.resize(1278, 836)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -59,7 +59,7 @@ class Ui_Dialog(object):
         self.Welcome_2.setFont(font)
         self.Welcome_2.setObjectName("Welcome_2")
         self.label_2 = QtWidgets.QLabel(Dialog)
-        self.label_2.setGeometry(QtCore.QRect(0, 0, 1251, 811))
+        self.label_2.setGeometry(QtCore.QRect(0, 0, 1291, 851))
         self.label_2.setText("")
         self.label_2.setPixmap(QtGui.QPixmap(":/newPrefix/start.jpg"))
         self.label_2.setScaledContents(True)

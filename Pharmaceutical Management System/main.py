@@ -14,6 +14,6 @@ if __name__ == '__main__':
     dialog = welcome.WelcomeDialog()
     widget.addWidget(dialog)
     widget.setWindowTitle("Pharmaceutical Management System")
-    widget.setFixedSize(1251, 811)
+    widget.setFixedSize(1275, 834)
     widget.show()
     sys.exit(app.exec_())

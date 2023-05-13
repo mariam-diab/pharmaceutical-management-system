@@ -39,41 +39,16 @@ font-color: rgb(255, 28, 244);
 }</string>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>2</number>
    </property>
    <widget class="QWidget" name="tab">
     <attribute name="title">
      <string>Home</string>
     </attribute>
-    <widget class="QLabel" name="label">
-     <property name="geometry">
-      <rect>
-       <x>-100</x>
-       <y>-10</y>
-       <width>1451</width>
-       <height>811</height>
-      </rect>
-     </property>
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="pixmap">
-      <pixmap resource="img/image.qrc">:/newPrefix/start.jpg</pixmap>
-     </property>
-     <property name="scaledContents">
-      <bool>true</bool>
-     </property>
-    </widget>
     <widget class="QLabel" name="Welcome">
      <property name="geometry">
       <rect>
-       <x>390</x>
+       <x>389</x>
        <y>10</y>
        <width>261</width>
        <height>81</height>
@@ -92,66 +67,13 @@ font-color: rgb(255, 28, 244);
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QTableView" name="homeTable">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>190</y>
-       <width>831</width>
-       <height>521</height>
-      </rect>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="homeTotal">
-     <property name="geometry">
-      <rect>
-       <x>930</x>
-       <y>640</y>
-       <width>141</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLineEdit{
-	border-radius: 20px;
-	border-color:rgb(0, 0, 0);
-}</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="homeName">
-     <property name="geometry">
-      <rect>
-       <x>630</x>
-       <y>20</y>
-       <width>221</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>28</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLineEdit{
-	border-radius: 20px;
-	color:rgb(255, 255, 255);
-	background-image: url(:/newPrefix/start2.jpg);}</string>
-     </property>
-     <property name="text">
-      <string>fhsdfjs</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
     <widget class="QLabel" name="Welcome_3">
      <property name="geometry">
       <rect>
-       <x>790</x>
-       <y>550</y>
-       <width>261</width>
-       <height>81</height>
+       <x>30</x>
+       <y>670</y>
+       <width>141</width>
+       <height>61</height>
       </rect>
      </property>
      <property name="font">
@@ -170,7 +92,7 @@ font-color: rgb(255, 28, 244);
     <widget class="QLabel" name="Welcome_7">
      <property name="geometry">
       <rect>
-       <x>20</x>
+       <x>40</x>
        <y>110</y>
        <width>391</width>
        <height>81</height>
@@ -191,21 +113,244 @@ font-color: rgb(255, 28, 244);
     <widget class="QPushButton" name="Signout">
      <property name="geometry">
       <rect>
-       <x>1060</x>
-       <y>20</y>
-       <width>131</width>
-       <height>61</height>
+       <x>1100</x>
+       <y>660</y>
+       <width>151</width>
+       <height>71</height>
       </rect>
      </property>
      <property name="font">
       <font>
        <pointsize>14</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
       </font>
      </property>
      <property name="text">
       <string>Sign out</string>
      </property>
     </widget>
+    <widget class="QTableWidget" name="today">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>190</y>
+       <width>601</width>
+       <height>451</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTableWidget {
+    border: 1px solid black;
+    font-size: 16px;
+}
+
+QHeaderView::section {
+    background-color: #f0f0f0;
+    border: 1px solid rgb(15, 12, 107);
+    font-weight: bold;
+    font-size: 18px;
+	color: black;
+}
+</string>
+     </property>
+     <property name="sizeAdjustPolicy">
+      <enum>QAbstractScrollArea::AdjustIgnored</enum>
+     </property>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>200</number>
+     </attribute>
+     <attribute name="horizontalHeaderHighlightSections">
+      <bool>true</bool>
+     </attribute>
+     <attribute name="verticalHeaderMinimumSectionSize">
+      <number>50</number>
+     </attribute>
+     <attribute name="verticalHeaderDefaultSectionSize">
+      <number>50</number>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>Drug name</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Quantitiy </string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Provider</string>
+      </property>
+     </column>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>639</x>
+       <y>10</y>
+       <width>211</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+	border-radius: 20px;
+	color:rgb(255, 255, 255);
+	background-image: url(:/newPrefix/start2.jpg);font-size: 24pt; text-align: center;}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QTableWidget" name="missing">
+     <property name="geometry">
+      <rect>
+       <x>660</x>
+       <y>190</y>
+       <width>601</width>
+       <height>451</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Calibri</family>
+       <pointsize>-1</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+       <kerning>true</kerning>
+      </font>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTableWidget {
+    border: 1px solid black;
+    font-size: 16px;
+}
+
+QHeaderView::section {
+    background-color:rgb(255, 255, 255);
+    border: 1px solid rgb(15, 12, 107);
+    font-weight: bold;
+    font-size: 18px;
+	color: rgb(170, 0, 0);
+}
+</string>
+     </property>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>200</number>
+     </attribute>
+     <attribute name="verticalHeaderMinimumSectionSize">
+      <number>50</number>
+     </attribute>
+     <attribute name="verticalHeaderDefaultSectionSize">
+      <number>50</number>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>Drug name</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>provider</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Quantitiy </string>
+      </property>
+     </column>
+    </widget>
+    <widget class="QLabel" name="Welcome_11">
+     <property name="geometry">
+      <rect>
+       <x>570</x>
+       <y>110</y>
+       <width>391</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Calibri</family>
+      </font>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:28pt; font-weight:600; color:#aa0000;&quot;&gt;Low Stock&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>-40</x>
+       <y>-50</y>
+       <width>1321</width>
+       <height>851</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="img/image.qrc">:/newPrefix/start.jpg</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="totalHome">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>670</y>
+       <width>211</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+	border-radius: 20px;
+	color:rgb(255, 255, 255);
+	background-image: url(:/newPrefix/start2.jpg);font-size: 24pt; text-align: center;}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <zorder>label_6</zorder>
+    <zorder>Welcome</zorder>
+    <zorder>Welcome_3</zorder>
+    <zorder>Welcome_7</zorder>
+    <zorder>Signout</zorder>
+    <zorder>today</zorder>
+    <zorder>label_5</zorder>
+    <zorder>missing</zorder>
+    <zorder>Welcome_11</zorder>
+    <zorder>totalHome</zorder>
    </widget>
    <widget class="QWidget" name="tab_2">
     <attribute name="title">
@@ -214,8 +359,8 @@ font-color: rgb(255, 28, 244);
     <widget class="QLineEdit" name="ordersMobile">
      <property name="geometry">
       <rect>
-       <x>300</x>
-       <y>140</y>
+       <x>970</x>
+       <y>80</y>
        <width>281</width>
        <height>51</height>
       </rect>
@@ -230,8 +375,8 @@ font-color: rgb(255, 28, 244);
     <widget class="QLabel" name="Welcome_5">
      <property name="geometry">
       <rect>
-       <x>-10</x>
-       <y>30</y>
+       <x>0</x>
+       <y>70</y>
        <width>301</width>
        <height>71</height>
       </rect>
@@ -252,8 +397,8 @@ font-color: rgb(255, 28, 244);
     <widget class="QLabel" name="Welcome_6">
      <property name="geometry">
       <rect>
-       <x>0</x>
-       <y>140</y>
+       <x>670</x>
+       <y>80</y>
        <width>281</width>
        <height>51</height>
       </rect>
@@ -271,27 +416,11 @@ font-color: rgb(255, 28, 244);
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QTableView" name="ordersTable">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>350</y>
-       <width>911</width>
-       <height>301</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QTableView{
-border-radius: 222px;
-border: 1px solid black;
-}</string>
-     </property>
-    </widget>
     <widget class="QLabel" name="Welcome_8">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>270</y>
+       <x>260</x>
+       <y>220</y>
        <width>221</width>
        <height>71</height>
       </rect>
@@ -312,8 +441,8 @@ border: 1px solid black;
     <widget class="QLineEdit" name="startShift_3">
      <property name="geometry">
       <rect>
-       <x>130</x>
-       <y>280</y>
+       <x>380</x>
+       <y>230</y>
        <width>341</width>
        <height>51</height>
       </rect>
@@ -328,18 +457,18 @@ border: 1px solid black;
     <widget class="QPushButton" name="signup_button_3">
      <property name="geometry">
       <rect>
-       <x>650</x>
-       <y>290</y>
-       <width>111</width>
-       <height>31</height>
+       <x>890</x>
+       <y>230</y>
+       <width>131</width>
+       <height>51</height>
       </rect>
      </property>
      <property name="font">
       <font>
        <family>Calibri</family>
-       <pointsize>12</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
+       <pointsize>16</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
       </font>
      </property>
      <property name="text">
@@ -349,8 +478,8 @@ border: 1px solid black;
     <widget class="QLabel" name="Welcome_9">
      <property name="geometry">
       <rect>
-       <x>-10</x>
-       <y>690</y>
+       <x>430</x>
+       <y>680</y>
        <width>171</width>
        <height>51</height>
       </rect>
@@ -368,37 +497,21 @@ border: 1px solid black;
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QLineEdit" name="startShift_4">
-     <property name="geometry">
-      <rect>
-       <x>130</x>
-       <y>690</y>
-       <width>121</width>
-       <height>51</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLineEdit{
-	border-radius: 20px;
-	border-color:rgb(0, 0, 0);
-}</string>
-     </property>
-    </widget>
     <widget class="QPushButton" name="signup_button_4">
      <property name="geometry">
       <rect>
-       <x>300</x>
-       <y>700</y>
-       <width>121</width>
-       <height>41</height>
+       <x>750</x>
+       <y>680</y>
+       <width>151</width>
+       <height>51</height>
       </rect>
      </property>
      <property name="font">
       <font>
        <family>Calibri</family>
-       <pointsize>12</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
+       <pointsize>16</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
       </font>
      </property>
      <property name="text">
@@ -408,8 +521,8 @@ border: 1px solid black;
     <widget class="QLineEdit" name="ordersName">
      <property name="geometry">
       <rect>
-       <x>300</x>
-       <y>40</y>
+       <x>310</x>
+       <y>80</y>
        <width>271</width>
        <height>51</height>
       </rect>
@@ -424,18 +537,18 @@ border: 1px solid black;
     <widget class="QPushButton" name="signup_button_7">
      <property name="geometry">
       <rect>
-       <x>500</x>
-       <y>290</y>
-       <width>111</width>
-       <height>31</height>
+       <x>750</x>
+       <y>230</y>
+       <width>131</width>
+       <height>51</height>
       </rect>
      </property>
      <property name="font">
       <font>
        <family>Calibri</family>
-       <pointsize>12</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
+       <pointsize>16</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
       </font>
      </property>
      <property name="text">
@@ -461,19 +574,89 @@ border: 1px solid black;
       <bool>true</bool>
      </property>
     </widget>
+    <widget class="QTableWidget" name="tableWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>400</x>
+       <y>330</y>
+       <width>501</width>
+       <height>341</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTableWidget {
+    border: 1px solid black;
+    font-size: 16px;
+}
+
+QHeaderView::section {
+    background-color: #f0f0f0;
+    border: 1px solid rgb(15, 12, 107);
+    font-weight: bold;
+    font-size: 18px;
+	color: black;
+}
+</string>
+     </property>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>250</number>
+     </attribute>
+     <attribute name="verticalHeaderMinimumSectionSize">
+      <number>50</number>
+     </attribute>
+     <attribute name="verticalHeaderDefaultSectionSize">
+      <number>50</number>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>Drug name</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Quantitiy </string>
+      </property>
+     </column>
+    </widget>
+    <widget class="QLabel" name="totalOrders">
+     <property name="geometry">
+      <rect>
+       <x>590</x>
+       <y>680</y>
+       <width>121</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+	border-radius: 20px;
+	color:rgb(255, 255, 255);
+	background-image: url(:/newPrefix/start2.jpg);font-size: 24pt; text-align: center;}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
     <zorder>label_3</zorder>
     <zorder>ordersMobile</zorder>
     <zorder>Welcome_5</zorder>
     <zorder>Welcome_6</zorder>
-    <zorder>ordersTable</zorder>
     <zorder>Welcome_8</zorder>
     <zorder>startShift_3</zorder>
     <zorder>signup_button_3</zorder>
     <zorder>Welcome_9</zorder>
-    <zorder>startShift_4</zorder>
     <zorder>signup_button_4</zorder>
     <zorder>ordersName</zorder>
     <zorder>signup_button_7</zorder>
+    <zorder>tableWidget_2</zorder>
+    <zorder>totalOrders</zorder>
    </widget>
    <widget class="QWidget" name="tab_3">
     <attribute name="title">
@@ -498,27 +681,11 @@ border: 1px solid black;
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QTableView" name="ordersTable_2">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>140</y>
-       <width>971</width>
-       <height>481</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QTableView{
-border-radius: 222px;
-border: 1px solid black;
-}</string>
-     </property>
-    </widget>
     <widget class="QLabel" name="Welcome_10">
      <property name="geometry">
       <rect>
-       <x>0</x>
-       <y>0</y>
+       <x>20</x>
+       <y>50</y>
        <width>301</width>
        <height>71</height>
       </rect>
@@ -539,15 +706,16 @@ border: 1px solid black;
     <widget class="QPushButton" name="signup_button_5">
      <property name="geometry">
       <rect>
-       <x>850</x>
-       <y>630</y>
-       <width>141</width>
-       <height>41</height>
+       <x>1080</x>
+       <y>580</y>
+       <width>171</width>
+       <height>61</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <pointsize>12</pointsize>
+       <family>Calibri</family>
+       <pointsize>16</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
@@ -559,8 +727,8 @@ border: 1px solid black;
     <widget class="QLineEdit" name="ordersName_2">
      <property name="geometry">
       <rect>
-       <x>60</x>
-       <y>70</y>
+       <x>320</x>
+       <y>60</y>
        <width>341</width>
        <height>51</height>
       </rect>
@@ -575,64 +743,104 @@ border: 1px solid black;
     <widget class="QPushButton" name="signup_button_6">
      <property name="geometry">
       <rect>
-       <x>440</x>
-       <y>80</y>
-       <width>131</width>
-       <height>41</height>
+       <x>580</x>
+       <y>140</y>
+       <width>141</width>
+       <height>51</height>
       </rect>
      </property>
      <property name="font">
       <font>
        <family>Calibri</family>
-       <pointsize>12</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
+       <pointsize>16</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
       </font>
      </property>
      <property name="text">
       <string>search</string>
      </property>
     </widget>
+    <widget class="QTableWidget" name="tableWidget">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>230</y>
+       <width>1001</width>
+       <height>501</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTableWidget {
+    border: 1px solid black;
+    font-size: 16px;
+}
+
+QHeaderView::section {
+    background-color: #f0f0f0;
+    border: 1px solid rgb(15, 12, 107);
+    font-weight: bold;
+    font-size: 18px;
+	color: black;
+}
+</string>
+     </property>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>250</number>
+     </attribute>
+     <attribute name="verticalHeaderMinimumSectionSize">
+      <number>50</number>
+     </attribute>
+     <attribute name="verticalHeaderDefaultSectionSize">
+      <number>50</number>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>Drug name</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Quantity</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Expiry date</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Provider</string>
+      </property>
+     </column>
+    </widget>
     <widget class="QPushButton" name="signup_button_8">
      <property name="geometry">
       <rect>
-       <x>600</x>
-       <y>80</y>
-       <width>151</width>
-       <height>41</height>
+       <x>1080</x>
+       <y>666</y>
+       <width>171</width>
+       <height>61</height>
       </rect>
      </property>
      <property name="font">
       <font>
        <family>Calibri</family>
-       <pointsize>12</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
+       <pointsize>16</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
       </font>
      </property>
      <property name="text">
       <string>Add to stock</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="signup_button_9">
-     <property name="geometry">
-      <rect>
-       <x>770</x>
-       <y>80</y>
-       <width>171</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Calibri</family>
-       <pointsize>12</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>Delete from stock</string>
      </property>
     </widget>
    </widget>
@@ -656,6 +864,32 @@ border: 1px solid black;
     <bool>true</bool>
    </property>
   </widget>
+  <widget class="QLabel" name="homeName_2">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1451</width>
+     <height>811</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="img/image.qrc">:/newPrefix/start.jpg</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <zorder>homeName_2</zorder>
   <zorder>label_2</zorder>
   <zorder>tabWidget</zorder>
  </widget>
