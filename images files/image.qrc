@@ -1,9 +1,14 @@
 <RCC>
   <qresource prefix="newPrefix">
+    <file>start3.jpg</file>
+    <file>start2.jpg</file>
+    <file>start.jpg</file>
+    <file>start.jpg</file>
     <file>solid-painted-concrete-wall-textured-backdrop.jpg</file>
     <file>pharmacy-shelves.jpg</file>
     <file>A_black_image.jpg</file>
     <file>pharmacy-background-2c2ezylpmvqjwto6.jpg</file>
+    <file>plastic-bottle-pills.jpg</file>
     <file>plastic-bottle-pills.jpg</file>
   </qresource>
   <qresource prefix="newPrefix"/>
