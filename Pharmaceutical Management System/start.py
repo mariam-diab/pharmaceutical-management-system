@@ -6,6 +6,7 @@ from widget_manager import widget
 import welcome
 import addToStock
 import mydatabase
+import datetime
 
 
 class StartDialog(QDialog, Ui_Dialog):

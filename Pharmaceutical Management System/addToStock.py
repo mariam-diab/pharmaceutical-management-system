@@ -53,6 +53,13 @@ class StockDialog(Ui_Dialog, QDialog):
     def remove_drug(self):
         drug_name = self.ui.ordersName_2.text()
         try:
+            query = "SELECT * FROM stock WHERE item_name = %s"
+            values = (drug_name,)
+            mydatabase.mycursor.execute(query, values)
+            drug = mydatabase.mycursor.fetchone()
+            if not drug:
+                QMessageBox.information(self, "Error", f"{drug_name} does not exist in the stock!")
+                return
             query = "DELETE FROM stock WHERE item_name = %s"
             values = (drug_name,)
             mydatabase.mycursor.execute(query, values)
@@ -66,8 +73,8 @@ class StockDialog(Ui_Dialog, QDialog):
         widget.removeWidget(last_widget)
 
 
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    dialog = StockDialog()
-    dialog.show()
-    sys.exit(app.exec_())
+# if __name__ == "__main__":
+#     app = QApplication(sys.argv)
+#     dialog = StockDialog()
+#     dialog.show()
+#     sys.exit(app.exec_())
