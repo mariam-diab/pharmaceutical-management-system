@@ -162,7 +162,7 @@ class Ui_Dialog(object):
 "    border-radius: 20px;\n"
 "    color:rgb(255, 255, 255);\n"
 "    background-image: url(:/newPrefix/start2.jpg);font-size: 24pt; text-align: center;}")
-        self.totalHome.setText("")
+        self.totalHome.setText("0")
         self.totalHome.setObjectName("totalHome")
         self.label_6.raise_()
         self.Welcome.raise_()

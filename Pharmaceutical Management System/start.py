@@ -137,7 +137,7 @@ class StartDialog(QDialog, Ui_Dialog):
             mydatabase.db.commit()
             stock_query = "UPDATE stock SET quantity = quantity + %s WHERE item_name = %s"
             mydatabase.mycursor.execute(stock_query, (quantity, drug_name))
-            self.total -= price_data[0] - new_price
+            self.total -= (price_data[0]*quantity)
             self.ui.totalOrders.setText(str(self.total))
             mydatabase.db.commit()
             self.load_data()
