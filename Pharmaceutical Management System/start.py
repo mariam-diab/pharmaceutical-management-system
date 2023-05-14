@@ -8,6 +8,7 @@ import addToStock
 import mydatabase
 import datetime
 
+
 # Sets up the UI, connects button clicks to their respective functions
 class StartDialog(QDialog, Ui_Dialog):
     def __init__(self):
@@ -30,6 +31,22 @@ class StartDialog(QDialog, Ui_Dialog):
         self.total = 0
         self.ui.totalOrders.setText(str(self.total))
         self.ui.deletebtn.clicked.connect(self.remove_order)
+        self.today_purchases()
+
+    def today_purchases(self):
+        current_date = current_date = datetime.date.today()
+        self.ui.today.clearContents()
+        self.ui.today.setRowCount(0)
+        query = "SELECT item_name, quantity, provider FROM purchases WHERE purchase_date = %s"
+        values = (current_date,)
+        mydatabase.mycursor.execute(query, values)
+        data = mydatabase.mycursor.fetchall()
+        self.ui.today.setRowCount(len(data))
+        for row_num, row_data in enumerate(data):
+            self.ui.today.insertRow(row_num)
+            for col_num, value in enumerate(row_data):
+                item = QTableWidgetItem(str(value))
+                self.ui.today.setItem(row_num, col_num, item)
 
     def load_order(self, customer_name, current_date=None):
         if current_date is None:
@@ -61,12 +78,13 @@ class StartDialog(QDialog, Ui_Dialog):
         if not stock_data:
             QMessageBox.critical(self, "Error", f"{drug_name} is not available in stock.")
         elif stock_data[0] < quantity:
-            QMessageBox.critical(self, "Error", f"No enough quantity in stock for {drug_name}. Available stock: {stock_data[0]}.")
+            QMessageBox.critical(self, "Error",
+                                 f"No enough quantity in stock for {drug_name}. Available stock: {stock_data[0]}.")
         else:
             price_query = "SELECT price FROM stock WHERE item_name = %s"
             mydatabase.mycursor.execute(price_query, (drug_name,))
             price_data = mydatabase.mycursor.fetchone()
-            price = price_data[0]*quantity
+            price = price_data[0] * quantity
             self.total += price
             self.ui.totalOrders.setText(str(self.total))
             query = "INSERT INTO purchases (item_name, quantity, purchase_date, purchase_time, customer_name, customer_phone, price) VALUES (%s, %s, %s, %s, %s, %s, %s)"
@@ -154,6 +172,7 @@ class StartDialog(QDialog, Ui_Dialog):
         self.ui.totalOrders.setText(str(self.total))
         self.ui.orderTable.clearContents()
         self.ui.orderTable.setRowCount(0)
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
