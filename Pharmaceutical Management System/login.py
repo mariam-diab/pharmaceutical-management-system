@@ -17,7 +17,7 @@ class LoginDialog(QDialog, Ui_Dialog):
         self.login_btn.clicked.connect(self.login)
         self.signu_btn.clicked.connect(self.open_signup)
         self.signup_dialog = None
-        self.loginDialog = None
+        self.loginScreen = None
         self.start_dialog = None
         self.username = None
 
@@ -42,8 +42,8 @@ class LoginDialog(QDialog, Ui_Dialog):
 
         else:
             QMessageBox.warning(self, "Login Error", "Invalid username or password")
-            self.loginDialog = loginDialog()
-            widget.addWidget(self.loginDialog)
+            self.loginScreen = LoginDialog()
+            widget.addWidget(self.loginScreen)
             widget.setCurrentIndex(widget.currentIndex()+1)
         mydatabase.db.close()
     #Opens the signup widget of the application

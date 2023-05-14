@@ -15,6 +15,7 @@ class StartDialog(QDialog, Ui_Dialog):
         self.ui = Ui_Dialog()
         self.ui.setupUi(self)
         # self.ui.tabWidget.setCurrentIndex(0)
+        self.load_data()
         self.ui.label_5.setText(user_data.name)
         self.ui.label_5.setStyleSheet(
             "color: white;border-radius: 20px; border-color:rgb(0, 0, 0); background-image: url(:/newPrefix/start2.jpg); font-size: 28pt; text-align:center;")
@@ -24,7 +25,6 @@ class StartDialog(QDialog, Ui_Dialog):
         self.ui.signup_button_8.clicked.connect(self.addToStock)
         self.ui.signup_button_5.clicked.connect(self.print)
         self.ui.ptintOrder.clicked.connect(self.printorder)
-        self.load_data()
         self.ui.signup_button_6.clicked.connect(self.search_drug)
         self.ui.addbtn.clicked.connect(self.add_order)
         self.total = 0

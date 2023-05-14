@@ -16,9 +16,9 @@ class StockDialog(Ui_Dialog, QDialog):
         self.ui.back.clicked.connect(self.Back)
         self.ui.signup_button_8.clicked.connect(self.add_drug)
         self.ui.signup_button_9.clicked.connect(self.remove_drug)
-        self.timer = QTimer()
-        self.timer.timeout.connect(self.refresh_data)
-        self.timer.start(1000)
+        # self.timer = QTimer()
+        # self.timer.timeout.connect(self.refresh_data)
+        # self.timer.start(1000)
 
     def refresh_data(self):
         self.load_data()
