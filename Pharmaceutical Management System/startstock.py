@@ -5,7 +5,7 @@ from widget_manager import widget
 import welcome
 import addToStock
 
-
+#Sets up the UI
 class StkDialog(Ui_Dialog, QDialog):
     def __init__(self):
         super().__init__()

@@ -6,6 +6,7 @@ import mydatabase
 import validations
 from main import widget
 
+#Sets up the UI, connects button clicks to their respective functions
 class SignupDialog(QDialog):
     def __init__(self):
         super().__init__()
@@ -17,6 +18,7 @@ class SignupDialog(QDialog):
         self.ui.password_lineEdit.textChanged.connect(self.check_password)
         self.login_dialog = None
 
+    #Checks if username is alphanumeric and set the buttons and value of username
     def check_username(self):
         username = self.ui.uname_line.text()
         if not username.isalnum():
@@ -25,7 +27,7 @@ class SignupDialog(QDialog):
         else:
             self.ui.uname_line.setStyleSheet("")
             self.ui.signup_button.setEnabled(True)
-
+    #Checks if password is alphanumeric and set the buttons  and value of password
     def check_password(self):
         password = self.ui.password_lineEdit.text()
         if not validations.is_valid_password(password):
@@ -35,7 +37,7 @@ class SignupDialog(QDialog):
         else:
             self.ui.password_lineEdit.setStyleSheet("")
             self.ui.signup_button.setEnabled(True)
-
+    #Handles signup conditions to add to database
     def signup(self):
         username = self.ui.uname_line.text()
         email = self.ui.email_lineEdit.text()
@@ -55,7 +57,7 @@ class SignupDialog(QDialog):
             mydatabase.db.commit()
             QMessageBox.information(self, "Signup Success", "User successfully registered")
             self.close()
-
+    #opens login widget
     def open_login(self):
         self.login_dialog = login.LoginDialog()
         widget.addWidget(self.login_dialog)
