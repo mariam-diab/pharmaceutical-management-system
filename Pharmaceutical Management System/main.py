@@ -1,6 +1,7 @@
 import sys
 import welcome
 import widget_manager
+import start
 from widget_manager import widget
 
 #Starts the application
