@@ -26,7 +26,7 @@ class StockDialog(Ui_Dialog, QDialog):
     def load_data(self):
         self.ui.tableWidget.clearContents()
         self.ui.tableWidget.setRowCount(0)
-        query = "SELECT item_name, provider_name, expire_date, quantity FROM stock"
+        query = "SELECT item_name, provider_name, quantity, expire_date FROM stock"
         mydatabase.mycursor.execute(query)
         data = mydatabase.mycursor.fetchall()
         self.ui.tableWidget.setRowCount(len(data))
@@ -38,9 +38,9 @@ class StockDialog(Ui_Dialog, QDialog):
 
     def add_drug(self):
         drug_name = self.ui.ordersName_2.text()
-        provider = self.ui.ordersName_3.text()
+        provider = self.ui.ordersName_5.text()
         expiry_date = self.ui.ordersName_4.text()
-        quantity = self.ui.ordersName_5.text()
+        quantity = self.ui.ordersName_3.text()
         try:
             query = "INSERT INTO stock (item_name, provider_name, expire_date, quantity) VALUES (%s, %s, %s, %s)"
             values = (drug_name, provider, expiry_date, quantity)
