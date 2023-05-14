@@ -9,6 +9,7 @@ from main import widget
 import user_data
 from user_data import name
 
+
 class LoginDialog(QDialog, Ui_Dialog):
     def __init__(self):
         super().__init__()
@@ -22,7 +23,7 @@ class LoginDialog(QDialog, Ui_Dialog):
     def open_start(self):
         self.start_dialog = start.StartDialog()
         widget.addWidget(self.start_dialog)
-        widget.setCurrentIndex(widget.currentIndex()+1)
+        widget.setCurrentIndex(widget.currentIndex() + 1)
 
     def login(self):
         username = self.username_lineEdit.text()
@@ -44,5 +45,4 @@ class LoginDialog(QDialog, Ui_Dialog):
     def open_signup(self):
         self.signup_dialog = signup.SignupDialog()
         widget.addWidget(self.signup_dialog)
-        widget.setCurrentIndex(widget.currentIndex()+1)
-
+        widget.setCurrentIndex(widget.currentIndex() + 1)

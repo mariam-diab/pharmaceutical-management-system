@@ -9,6 +9,7 @@ try:
         database="pharmacy"
     )
     mycursor = db.cursor()
+
 except mysql.connector.Error as e:
     print(f"Error connecting to database: {e}")
     sys.exit()
