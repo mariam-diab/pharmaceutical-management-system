@@ -45,7 +45,7 @@ class LoginDialog(QDialog, Ui_Dialog):
             self.loginScreen = LoginDialog()
             widget.addWidget(self.loginScreen)
             widget.setCurrentIndex(widget.currentIndex()+1)
-        mydatabase.db.close()
+
     #Opens the signup widget of the application
     def open_signup(self):
         self.signup_dialog = signup.SignupDialog()
