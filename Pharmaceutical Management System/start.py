@@ -80,8 +80,8 @@ class StartDialog(QDialog, Ui_Dialog):
         QMessageBox.information(self, "print", "Printing.....")
 
 
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    dialog = StartDialog()
-    dialog.show()
-    sys.exit(app.exec_())
+# if __name__ == "__main__":
+#     app = QApplication(sys.argv)
+#     dialog = StartDialog()
+#     dialog.show()
+#     sys.exit(app.exec_())
