@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'start.ui'
+# Form implementation generated from reading ui file 'UI Designs\start.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
@@ -59,7 +59,6 @@ class Ui_Dialog(object):
         font = QtGui.QFont()
         font.setPointSize(14)
         font.setBold(True)
-        font.setWeight(75)
         self.Signout.setFont(font)
         self.Signout.setObjectName("Signout")
         self.today = QtWidgets.QTableWidget(self.tab)
@@ -72,7 +71,6 @@ class Ui_Dialog(object):
         font = QtGui.QFont()
         font.setPointSize(-1)
         font.setBold(True)
-        font.setWeight(75)
         self.today.setFont(font)
         self.today.setFocusPolicy(QtCore.Qt.NoFocus)
         self.today.setStyleSheet("QTableWidget {\n"
@@ -117,7 +115,6 @@ class Ui_Dialog(object):
         font.setPointSize(-1)
         font.setBold(False)
         font.setItalic(False)
-        font.setWeight(50)
         font.setKerning(True)
         self.missing.setFont(font)
         self.missing.setFocusPolicy(QtCore.Qt.NoFocus)
@@ -224,7 +221,6 @@ class Ui_Dialog(object):
         font.setFamily("Calibri")
         font.setPointSize(16)
         font.setBold(True)
-        font.setWeight(75)
         self.signup_button_3.setFont(font)
         self.signup_button_3.setObjectName("signup_button_3")
         self.Welcome_9 = QtWidgets.QLabel(self.tab_2)
@@ -241,7 +237,6 @@ class Ui_Dialog(object):
         font.setFamily("Calibri")
         font.setPointSize(16)
         font.setBold(True)
-        font.setWeight(75)
         self.signup_button_4.setFont(font)
         self.signup_button_4.setObjectName("signup_button_4")
         self.ordersName = QtWidgets.QLineEdit(self.tab_2)
@@ -257,7 +252,6 @@ class Ui_Dialog(object):
         font.setFamily("Calibri")
         font.setPointSize(16)
         font.setBold(True)
-        font.setWeight(75)
         self.signup_button_7.setFont(font)
         self.signup_button_7.setObjectName("signup_button_7")
         self.label_3 = QtWidgets.QLabel(self.tab_2)
@@ -271,7 +265,6 @@ class Ui_Dialog(object):
         font = QtGui.QFont()
         font.setPointSize(-1)
         font.setBold(True)
-        font.setWeight(75)
         self.tableWidget_2.setFont(font)
         self.tableWidget_2.setStyleSheet("QTableWidget {\n"
 "    border: 1px solid black;\n"
@@ -340,7 +333,6 @@ class Ui_Dialog(object):
         font.setFamily("Calibri")
         font.setPointSize(16)
         font.setBold(True)
-        font.setWeight(75)
         self.signup_button_5.setFont(font)
         self.signup_button_5.setObjectName("signup_button_5")
         self.ordersName_2 = QtWidgets.QLineEdit(self.tab_3)
@@ -356,7 +348,6 @@ class Ui_Dialog(object):
         font.setFamily("Calibri")
         font.setPointSize(16)
         font.setBold(True)
-        font.setWeight(75)
         self.signup_button_6.setFont(font)
         self.signup_button_6.setObjectName("signup_button_6")
         self.tableWidget = QtWidgets.QTableWidget(self.tab_3)
@@ -364,7 +355,6 @@ class Ui_Dialog(object):
         font = QtGui.QFont()
         font.setPointSize(-1)
         font.setBold(True)
-        font.setWeight(75)
         self.tableWidget.setFont(font)
         self.tableWidget.setStyleSheet("QTableWidget {\n"
 "    border: 1px solid black;\n"
@@ -399,7 +389,6 @@ class Ui_Dialog(object):
         font.setFamily("Calibri")
         font.setPointSize(16)
         font.setBold(True)
-        font.setWeight(75)
         self.signup_button_8.setFont(font)
         self.signup_button_8.setObjectName("signup_button_8")
         self.tabWidget.addTab(self.tab_3, "")

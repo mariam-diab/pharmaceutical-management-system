@@ -26,6 +26,16 @@ class StartDialog(QDialog, Ui_Dialog):
         self.ui.signup_button_4.clicked.connect(self.printorder)
         self.load_data()
         self.ui.signup_button_6.clicked.connect(self.search_drug)
+        self.ui.signup_button_7.clicked.connect(self.add_drug)
+
+
+    def add_drug(self):
+        customer_name = self.ordersName.text()
+        mobile_number = self.ordersMobile.text()
+        drug_name = self.startShift_3.text()
+        current_date = datetime.date.today()
+        current_time = datetime.datetime.now().time()
+
 
     def search_drug(self):
         drug_name = self.ui.ordersName_2.text()
@@ -70,8 +80,8 @@ class StartDialog(QDialog, Ui_Dialog):
         QMessageBox.information(self, "print", "Printing.....")
 
 
-# if __name__ == "__main__":
-#     app = QApplication(sys.argv)
-#     dialog = StartDialog()
-#     dialog.show()
-#     sys.exit(app.exec_())
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    dialog = StartDialog()
+    dialog.show()
+    sys.exit(app.exec_())
