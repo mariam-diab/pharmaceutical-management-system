@@ -8,7 +8,8 @@ import addToStock
 import mydatabase
 import datetime
 
-#Sets up the UI, connects button clicks to their respective functions
+
+# Sets up the UI, connects button clicks to their respective functions
 class StartDialog(QDialog, Ui_Dialog):
     def __init__(self):
         super().__init__()
@@ -29,7 +30,9 @@ class StartDialog(QDialog, Ui_Dialog):
         self.ui.addbtn.clicked.connect(self.add_order)
         self.total = 0
         self.ui.totalOrders.setText(str(self.total))
-    #Function to add orders in stock
+        self.ui.deletebtn.clicked.connect(self.remove_order)
+
+    # Function to record orders in purchases and update stock
     def add_order(self):
         customer_name = self.ui.ordersName.text()
         customer_phone = self.ui.ordersMobile.text()
@@ -59,12 +62,45 @@ class StartDialog(QDialog, Ui_Dialog):
             mydatabase.db.commit()
             QMessageBox.information(self, "Success", "Drug added successfully.")
 
-    #Search for the drugs using user input
+    # Function to record orders in purchases and update stock
+    def remove_order(self):
+        customer_name = self.ui.ordersName.text()
+        drug_name = self.ui.orderName.text()
+        quantity = int(self.ui.quantity.text())
+        check_query = "SELECT quantity FROM purchases where customer_name = %s AND item_name = %s"
+        mydatabase.mycursor.execute(check_query, (customer_name, drug_name))
+        check_data = mydatabase.mycursor.fetchone()
+        print(check_data)
+        if not check_data:
+            QMessageBox.critical(self, "Error", f"{drug_name} was not added to the order")
+        elif check_data[0] < quantity:
+            QMessageBox.critical(self, "Error", f"You only added {check_data[0]} to the order")
+        else:
+            price_query = "SELECT price FROM stock WHERE item_name = %s"
+            mydatabase.mycursor.execute(price_query, (drug_name,))
+            price_data = mydatabase.mycursor.fetchone()
+            remaining_quantity = check_data[0] - quantity
+            new_price = self.total - quantity * price_data[0]
+            update_query = "UPDATE purchases SET quantity = %s, price = %s WHERE customer_name = %s AND item_name = %s"
+            mydatabase.mycursor.execute(update_query, (remaining_quantity, new_price, customer_name, drug_name))
+            mydatabase.db.commit()
+            stock_query = "UPDATE stock SET quantity = quantity + %s WHERE item_name = %s"
+            mydatabase.mycursor.execute(stock_query, (quantity, drug_name))
+            self.total -= check_data[0] - new_price
+            self.ui.totalOrders.setText(str(self.total))
+            mydatabase.db.commit()
+            QMessageBox.information(self, "Success", f"{quantity} {drug_name} was removed from the order.")
+
+
+
+
+
+    # Search for the drugs using user input
     def search_drug(self):
         drug_name = self.ui.ordersName_2.text()
         self.load_data(drug_name)
 
-    #Retrieves the data from database
+    # Retrieves the data from database
     def load_data(self, drug_name=None):
         self.ui.tableWidget.clearContents()
         self.ui.tableWidget.setRowCount(0)
@@ -79,30 +115,32 @@ class StartDialog(QDialog, Ui_Dialog):
             for col_num, value in enumerate(row_data):
                 item = QTableWidgetItem(str(value))
                 self.ui.tableWidget.setItem(row_num, col_num, item)
-    #Opens sign out widget
+
+    # Opens sign out widget
     def signOut(self):
         self.welcomeScreen = welcome.WelcomeDialog()
         widget.addWidget(self.welcomeScreen)
         widget.setCurrentIndex(widget.currentIndex() + 1)
         QMessageBox.information(self, "Sign out", "Sign Out successful!")
-    #Opens add to stock widget
+
+    # Opens add to stock widget
     def addToStock(self):
         self.StockScreen = addToStock.StockDialog()
         widget.addWidget(self.StockScreen)
         widget.setCurrentIndex(widget.currentIndex() + 1)
-    #Print report for stock
+
+    # Print report for stock
     def print(self):
         QMessageBox.information(self, "print", "Printing.....")
 
-    #Print receipt
+    # Print receipt
     def printorder(self):
         QMessageBox.information(self, "print", "Printing.....")
         self.total = 0
         self.ui.totalOrders.setText(str(self.total))
 
-
-# if __name__ == "__main__":
-#     app = QApplication(sys.argv)
-#     dialog = StartDialog()
-#     dialog.show()
-#     sys.exit(app.exec_())
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    dialog = StartDialog()
+    dialog.show()
+    sys.exit(app.exec_())

@@ -15,7 +15,7 @@ class StockDialog(Ui_Dialog, QDialog):
         self.ui.back.clicked.connect(self.Back)
         self.ui.signup_button_8.clicked.connect(self.add_drug)
         self.ui.signup_button_9.clicked.connect(self.remove_drug)
-        # self.load_data()
+        self.load_data()
 
 
     def refresh_data(self):
