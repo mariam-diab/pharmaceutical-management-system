@@ -8,7 +8,6 @@ import addToStock
 import mydatabase
 import datetime
 
-
 # Sets up the UI, connects button clicks to their respective functions
 class StartDialog(QDialog, Ui_Dialog):
     def __init__(self):
@@ -31,6 +30,22 @@ class StartDialog(QDialog, Ui_Dialog):
         self.total = 0
         self.ui.totalOrders.setText(str(self.total))
         self.ui.deletebtn.clicked.connect(self.remove_order)
+
+    def load_order(self, customer_name, current_date=None):
+        if current_date is None:
+            current_date = datetime.date.today()
+        self.ui.orderTable.clearContents()
+        self.ui.orderTable.setRowCount(0)
+        query = "SELECT item_name, quantity FROM purchases WHERE customer_name = %s and purchase_date = %s"
+        values = (customer_name, current_date)
+        mydatabase.mycursor.execute(query, values)
+        data = mydatabase.mycursor.fetchall()
+        self.ui.orderTable.setRowCount(len(data))
+        for row_num, row_data in enumerate(data):
+            self.ui.orderTable.insertRow(row_num)
+            for col_num, value in enumerate(row_data):
+                item = QTableWidgetItem(str(value))
+                self.ui.orderTable.setItem(row_num, col_num, item)
 
     # Function to record orders in purchases and update stock
     def add_order(self):
@@ -61,6 +76,7 @@ class StartDialog(QDialog, Ui_Dialog):
             mydatabase.mycursor.execute(update_query, (quantity, drug_name))
             mydatabase.db.commit()
             self.load_data()
+            self.load_order(customer_name, current_date)
             QMessageBox.information(self, "Success", "Drug added successfully.")
 
     # Function to record orders in purchases and update stock
@@ -71,7 +87,6 @@ class StartDialog(QDialog, Ui_Dialog):
         check_query = "SELECT quantity FROM purchases where customer_name = %s AND item_name = %s"
         mydatabase.mycursor.execute(check_query, (customer_name, drug_name))
         check_data = mydatabase.mycursor.fetchone()
-        print(check_data)
         if not check_data:
             QMessageBox.critical(self, "Error", f"{drug_name} was not added to the order")
         elif check_data[0] < quantity:
@@ -87,15 +102,12 @@ class StartDialog(QDialog, Ui_Dialog):
             mydatabase.db.commit()
             stock_query = "UPDATE stock SET quantity = quantity + %s WHERE item_name = %s"
             mydatabase.mycursor.execute(stock_query, (quantity, drug_name))
-            self.total -= check_data[0] - new_price
+            self.total -= price_data[0] - new_price
             self.ui.totalOrders.setText(str(self.total))
             mydatabase.db.commit()
             self.load_data()
+            self.load_order(customer_name)
             QMessageBox.information(self, "Success", f"{quantity} {drug_name} was removed from the order.")
-
-
-
-
 
     # Search for the drugs using user input
     def search_drug(self):
@@ -140,6 +152,8 @@ class StartDialog(QDialog, Ui_Dialog):
         QMessageBox.information(self, "print", "Printing.....")
         self.total = 0
         self.ui.totalOrders.setText(str(self.total))
+        self.ui.orderTable.clearContents()
+        self.ui.orderTable.setRowCount(0)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
