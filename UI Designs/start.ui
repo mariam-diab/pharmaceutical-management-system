@@ -356,9 +356,9 @@ QHeaderView::section {
     <widget class="QLineEdit" name="ordersMobile">
      <property name="geometry">
       <rect>
-       <x>970</x>
-       <y>80</y>
-       <width>281</width>
+       <x>260</x>
+       <y>280</y>
+       <width>321</width>
        <height>51</height>
       </rect>
      </property>
@@ -372,8 +372,8 @@ QHeaderView::section {
     <widget class="QLabel" name="Welcome_5">
      <property name="geometry">
       <rect>
-       <x>0</x>
-       <y>70</y>
+       <x>-20</x>
+       <y>160</y>
        <width>301</width>
        <height>71</height>
       </rect>
@@ -394,8 +394,8 @@ QHeaderView::section {
     <widget class="QLabel" name="Welcome_6">
      <property name="geometry">
       <rect>
-       <x>670</x>
-       <y>80</y>
+       <x>-10</x>
+       <y>280</y>
        <width>281</width>
        <height>51</height>
       </rect>
@@ -416,8 +416,8 @@ QHeaderView::section {
     <widget class="QLabel" name="Welcome_8">
      <property name="geometry">
       <rect>
-       <x>260</x>
-       <y>220</y>
+       <x>30</x>
+       <y>380</y>
        <width>221</width>
        <height>71</height>
       </rect>
@@ -429,17 +429,17 @@ QHeaderView::section {
       </font>
      </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt; color:#ffffff;&quot;&gt;Order&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt; color:#ffffff;&quot;&gt;Item name&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
      </property>
     </widget>
-    <widget class="QLineEdit" name="startShift_3">
+    <widget class="QLineEdit" name="orderName">
      <property name="geometry">
       <rect>
-       <x>380</x>
-       <y>230</y>
+       <x>250</x>
+       <y>390</y>
        <width>341</width>
        <height>51</height>
       </rect>
@@ -451,11 +451,11 @@ QHeaderView::section {
 }</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="signup_button_3">
+    <widget class="QPushButton" name="deletebtn">
      <property name="geometry">
       <rect>
-       <x>890</x>
-       <y>230</y>
+       <x>390</x>
+       <y>630</y>
        <width>131</width>
        <height>51</height>
       </rect>
@@ -474,8 +474,8 @@ QHeaderView::section {
     <widget class="QLabel" name="Welcome_9">
      <property name="geometry">
       <rect>
-       <x>430</x>
-       <y>680</y>
+       <x>750</x>
+       <y>710</y>
        <width>171</width>
        <height>51</height>
       </rect>
@@ -493,11 +493,11 @@ QHeaderView::section {
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QPushButton" name="signup_button_4">
+    <widget class="QPushButton" name="ptintOrder">
      <property name="geometry">
       <rect>
-       <x>750</x>
-       <y>680</y>
+       <x>1070</x>
+       <y>710</y>
        <width>151</width>
        <height>51</height>
       </rect>
@@ -516,9 +516,9 @@ QHeaderView::section {
     <widget class="QLineEdit" name="ordersName">
      <property name="geometry">
       <rect>
-       <x>310</x>
-       <y>80</y>
-       <width>271</width>
+       <x>250</x>
+       <y>170</y>
+       <width>321</width>
        <height>51</height>
       </rect>
      </property>
@@ -529,11 +529,11 @@ QHeaderView::section {
 }</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="signup_button_7">
+    <widget class="QPushButton" name="addbtn">
      <property name="geometry">
       <rect>
-       <x>750</x>
-       <y>230</y>
+       <x>200</x>
+       <y>630</y>
        <width>131</width>
        <height>51</height>
       </rect>
@@ -568,13 +568,13 @@ QHeaderView::section {
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QTableWidget" name="tableWidget_2">
+    <widget class="QTableWidget" name="orderTable">
      <property name="geometry">
       <rect>
-       <x>400</x>
-       <y>330</y>
+       <x>750</x>
+       <y>80</y>
        <width>501</width>
-       <height>341</height>
+       <height>601</height>
       </rect>
      </property>
      <property name="font">
@@ -621,8 +621,8 @@ QHeaderView::section {
     <widget class="QLabel" name="totalOrders">
      <property name="geometry">
       <rect>
-       <x>590</x>
-       <y>680</y>
+       <x>910</x>
+       <y>710</y>
        <width>121</width>
        <height>51</height>
       </rect>
@@ -637,19 +637,59 @@ QHeaderView::section {
       <string/>
      </property>
     </widget>
+    <widget class="QLabel" name="Welcome_12">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>500</y>
+       <width>221</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Calibri</family>
+       <pointsize>48</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt; color:#ffffff;&quot;&gt;Order quantity&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="quantity">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>510</y>
+       <width>341</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit{
+	border-radius: 20px;
+	border-color:rgb(0, 0, 0);
+}</string>
+     </property>
+    </widget>
     <zorder>label_3</zorder>
     <zorder>ordersMobile</zorder>
     <zorder>Welcome_5</zorder>
     <zorder>Welcome_6</zorder>
     <zorder>Welcome_8</zorder>
-    <zorder>startShift_3</zorder>
-    <zorder>signup_button_3</zorder>
+    <zorder>orderName</zorder>
+    <zorder>deletebtn</zorder>
     <zorder>Welcome_9</zorder>
-    <zorder>signup_button_4</zorder>
+    <zorder>ptintOrder</zorder>
     <zorder>ordersName</zorder>
-    <zorder>signup_button_7</zorder>
-    <zorder>tableWidget_2</zorder>
+    <zorder>addbtn</zorder>
+    <zorder>orderTable</zorder>
     <zorder>totalOrders</zorder>
+    <zorder>Welcome_12</zorder>
+    <zorder>quantity</zorder>
    </widget>
    <widget class="QWidget" name="tab_3">
     <attribute name="title">
