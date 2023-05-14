@@ -8,7 +8,7 @@ import addToStock
 import mydatabase
 import datetime
 
-
+#Sets up the UI, connects button clicks to their respective functions
 class StartDialog(QDialog, Ui_Dialog):
     def __init__(self):
         super().__init__()
@@ -29,7 +29,7 @@ class StartDialog(QDialog, Ui_Dialog):
         self.ui.addbtn.clicked.connect(self.add_order)
         self.total = 0
         self.ui.totalOrders.setText(str(self.total))
-
+    #Function to add orders in stock
     def add_order(self):
         customer_name = self.ui.ordersName.text()
         customer_phone = self.ui.ordersMobile.text()
@@ -59,11 +59,12 @@ class StartDialog(QDialog, Ui_Dialog):
             mydatabase.db.commit()
             QMessageBox.information(self, "Success", "Drug added successfully.")
 
-
+    #Search for the drugs using user input
     def search_drug(self):
         drug_name = self.ui.ordersName_2.text()
         self.load_data(drug_name)
 
+    #Retrieves the data from database
     def load_data(self, drug_name=None):
         self.ui.tableWidget.clearContents()
         self.ui.tableWidget.setRowCount(0)
@@ -78,28 +79,22 @@ class StartDialog(QDialog, Ui_Dialog):
             for col_num, value in enumerate(row_data):
                 item = QTableWidgetItem(str(value))
                 self.ui.tableWidget.setItem(row_num, col_num, item)
-
+    #Opens sign out widget
     def signOut(self):
         self.welcomeScreen = welcome.WelcomeDialog()
         widget.addWidget(self.welcomeScreen)
         widget.setCurrentIndex(widget.currentIndex() + 1)
         QMessageBox.information(self, "Sign out", "Sign Out successful!")
-
-    def signOut(self):
-        self.welcomeScreen = welcome.WelcomeDialog()
-        widget.addWidget(self.welcomeScreen)
-        widget.setCurrentIndex(widget.currentIndex() + 1)
-        QMessageBox.information(self, "Sign out", "Sign Out successful!")
-
+    #Opens add to stock widget
     def addToStock(self):
         self.StockScreen = addToStock.StockDialog()
         widget.addWidget(self.StockScreen)
         widget.setCurrentIndex(widget.currentIndex() + 1)
-
+    #Print report for stock
     def print(self):
         QMessageBox.information(self, "print", "Printing.....")
 
-
+    #Print receipt
     def printorder(self):
         QMessageBox.information(self, "print", "Printing.....")
         self.total = 0
