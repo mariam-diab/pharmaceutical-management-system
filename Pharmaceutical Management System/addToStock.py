@@ -2,7 +2,8 @@ import sys
 from PyQt5.QtWidgets import QApplication, QDialog, QTableWidgetItem, QMessageBox
 from addtostock_ui import Ui_Dialog
 import mydatabase
-from main import widget
+from widget_manager import widget
+from PyQt5.QtCore import QTimer
 
 
 class StockDialog(Ui_Dialog, QDialog):
@@ -11,17 +12,26 @@ class StockDialog(Ui_Dialog, QDialog):
         self.ui = Ui_Dialog()
         self.ui.setupUi(self)
         self.start_dialog = None
-        self.startstk_dialog = None
+        self.startstk_dialog= None
         self.ui.back.clicked.connect(self.Back)
         self.ui.signup_button_8.clicked.connect(self.add_drug)
         self.ui.signup_button_9.clicked.connect(self.remove_drug)
+        self.timer = QTimer()
+        self.timer.timeout.connect(self.refresh_data)
+        self.timer.start(1000)
+
+    def refresh_data(self):
         self.load_data()
 
     def load_data(self):
+        self.ui.tableWidget.clearContents()
+        self.ui.tableWidget.setRowCount(0)
         query = "SELECT item_name, provider_name, expire_date, quantity FROM stock"
         mydatabase.mycursor.execute(query)
         data = mydatabase.mycursor.fetchall()
+        self.ui.tableWidget.setRowCount(len(data))
         for row_num, row_data in enumerate(data):
+            self.ui.tableWidget.insertRow(row_num)
             for col_num, value in enumerate(row_data):
                 item = QTableWidgetItem(str(value))
                 self.ui.tableWidget.setItem(row_num, col_num, item)
@@ -38,7 +48,7 @@ class StockDialog(Ui_Dialog, QDialog):
             mydatabase.db.commit()
             QMessageBox.information(self, "Added Drug", f"{drug_name} added to stock successfully!")
         except Exception as e:
-            QMessageBox.information(self, "Error", f"An error '{e}' occurred while adding the drug to stock")
+            QMessageBox.information(self, "Error", f"An error '{e}' occurred while adding {drug_name} to the stock")
 
     def remove_drug(self):
         drug_name = self.ui.ordersName_2.text()
@@ -49,7 +59,7 @@ class StockDialog(Ui_Dialog, QDialog):
             mydatabase.db.commit()
             QMessageBox.information(self, "Removed Drug", f"{drug_name} removed from stock successfully!")
         except Exception as e:
-            QMessageBox.critical(self, "Error", str(e))
+            QMessageBox.information(self, "Error", f"An error '{e}' occurred while removing {drug_name} from the stock")
 
     def Back(self):
         last_widget = widget.widget(widget.count() - 1)
