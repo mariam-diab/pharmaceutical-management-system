@@ -60,6 +60,7 @@ class StartDialog(QDialog, Ui_Dialog):
             update_query = "UPDATE stock SET quantity = quantity - %s WHERE item_name = %s"
             mydatabase.mycursor.execute(update_query, (quantity, drug_name))
             mydatabase.db.commit()
+            self.load_data()
             QMessageBox.information(self, "Success", "Drug added successfully.")
 
     # Function to record orders in purchases and update stock
@@ -89,6 +90,7 @@ class StartDialog(QDialog, Ui_Dialog):
             self.total -= check_data[0] - new_price
             self.ui.totalOrders.setText(str(self.total))
             mydatabase.db.commit()
+            self.load_data()
             QMessageBox.information(self, "Success", f"{quantity} {drug_name} was removed from the order.")
 
 
