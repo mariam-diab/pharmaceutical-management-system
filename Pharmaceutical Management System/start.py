@@ -32,21 +32,38 @@ class StartDialog(QDialog, Ui_Dialog):
         self.ui.totalOrders.setText(str(self.total))
         self.ui.deletebtn.clicked.connect(self.remove_order)
         self.today_purchases()
+        self.low_stock()
 
     def today_purchases(self):
-        current_date = current_date = datetime.date.today()
+        current_date = datetime.date.today()
         self.ui.today.clearContents()
         self.ui.today.setRowCount(0)
-        query = "SELECT item_name, quantity, provider FROM purchases WHERE purchase_date = %s"
+        query = "SELECT item_name, quantity, price FROM purchases WHERE purchase_date = %s"
         values = (current_date,)
         mydatabase.mycursor.execute(query, values)
         data = mydatabase.mycursor.fetchall()
         self.ui.today.setRowCount(len(data))
+        total = 0
         for row_num, row_data in enumerate(data):
             self.ui.today.insertRow(row_num)
             for col_num, value in enumerate(row_data):
                 item = QTableWidgetItem(str(value))
                 self.ui.today.setItem(row_num, col_num, item)
+            total += row_data[2]
+        self.ui.totalHome.setText(str(total))
+
+    def low_stock(self):
+        self.ui.missing.clearContents()
+        self.ui.missing.setRowCount(0)
+        query = "SELECT item_name, quantity, provider_name FROM stock WHERE quantity <= 50"
+        mydatabase.mycursor.execute(query)
+        data = mydatabase.mycursor.fetchall()
+        self.ui.missing.setRowCount(len(data))
+        for row_num, row_data in enumerate(data):
+            self.ui.missing.insertRow(row_num)
+            for col_num, value in enumerate(row_data):
+                item = QTableWidgetItem(str(value))
+                self.ui.missing.setItem(row_num, col_num, item)
 
     def load_order(self, customer_name, current_date=None):
         if current_date is None:

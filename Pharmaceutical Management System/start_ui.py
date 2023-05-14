@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'UI Designs\start.ui'
+# Form implementation generated from reading ui file 'start.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
@@ -178,14 +178,17 @@ class Ui_Dialog(object):
         self.tab_2 = QtWidgets.QWidget()
         self.tab_2.setObjectName("tab_2")
         self.ordersMobile = QtWidgets.QLineEdit(self.tab_2)
-        self.ordersMobile.setGeometry(QtCore.QRect(260, 280, 321, 51))
-        self.ordersMobile.setStyleSheet("QLineEdit{\n"
+        self.ordersMobile.setGeometry(QtCore.QRect(340, 200, 301, 51))
+        self.ordersMobile.setStyleSheet("\n"
+"QLineEdit{\n"
 "    border-radius: 20px;\n"
+"    font: 700 12pt \"Calibri\";\n"
 "    border-color:rgb(0, 0, 0);\n"
+"    text-align: center;\n"
 "}")
         self.ordersMobile.setObjectName("ordersMobile")
         self.Welcome_5 = QtWidgets.QLabel(self.tab_2)
-        self.Welcome_5.setGeometry(QtCore.QRect(-20, 160, 301, 71))
+        self.Welcome_5.setGeometry(QtCore.QRect(-20, 80, 301, 71))
         font = QtGui.QFont()
         font.setFamily("Calibri")
         font.setPointSize(48)
@@ -193,7 +196,7 @@ class Ui_Dialog(object):
         self.Welcome_5.setAlignment(QtCore.Qt.AlignCenter)
         self.Welcome_5.setObjectName("Welcome_5")
         self.Welcome_6 = QtWidgets.QLabel(self.tab_2)
-        self.Welcome_6.setGeometry(QtCore.QRect(-10, 280, 281, 51))
+        self.Welcome_6.setGeometry(QtCore.QRect(-10, 200, 281, 51))
         font = QtGui.QFont()
         font.setFamily("Calibri")
         font.setPointSize(48)
@@ -201,7 +204,7 @@ class Ui_Dialog(object):
         self.Welcome_6.setAlignment(QtCore.Qt.AlignCenter)
         self.Welcome_6.setObjectName("Welcome_6")
         self.Welcome_8 = QtWidgets.QLabel(self.tab_2)
-        self.Welcome_8.setGeometry(QtCore.QRect(30, 380, 221, 71))
+        self.Welcome_8.setGeometry(QtCore.QRect(30, 300, 221, 71))
         font = QtGui.QFont()
         font.setFamily("Calibri")
         font.setPointSize(48)
@@ -209,10 +212,13 @@ class Ui_Dialog(object):
         self.Welcome_8.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.Welcome_8.setObjectName("Welcome_8")
         self.orderName = QtWidgets.QLineEdit(self.tab_2)
-        self.orderName.setGeometry(QtCore.QRect(250, 390, 341, 51))
-        self.orderName.setStyleSheet("QLineEdit{\n"
+        self.orderName.setGeometry(QtCore.QRect(340, 310, 301, 51))
+        self.orderName.setStyleSheet("\n"
+"QLineEdit{\n"
 "    border-radius: 20px;\n"
+"    font: 700 12pt \"Calibri\";\n"
 "    border-color:rgb(0, 0, 0);\n"
+"    text-align: center;\n"
 "}")
         self.orderName.setObjectName("orderName")
         self.deletebtn = QtWidgets.QPushButton(self.tab_2)
@@ -240,11 +246,15 @@ class Ui_Dialog(object):
         self.ptintOrder.setFont(font)
         self.ptintOrder.setObjectName("ptintOrder")
         self.ordersName = QtWidgets.QLineEdit(self.tab_2)
-        self.ordersName.setGeometry(QtCore.QRect(250, 170, 321, 51))
-        self.ordersName.setStyleSheet("QLineEdit{\n"
+        self.ordersName.setGeometry(QtCore.QRect(340, 90, 301, 51))
+        self.ordersName.setStyleSheet("\n"
+"QLineEdit{\n"
 "    border-radius: 20px;\n"
+"    font: 700 12pt \"Calibri\";\n"
 "    border-color:rgb(0, 0, 0);\n"
+"    text-align: center;\n"
 "}")
+        self.ordersName.setText("")
         self.ordersName.setObjectName("ordersName")
         self.addbtn = QtWidgets.QPushButton(self.tab_2)
         self.addbtn.setGeometry(QtCore.QRect(200, 630, 131, 51))
@@ -298,7 +308,7 @@ class Ui_Dialog(object):
         self.totalOrders.setText("")
         self.totalOrders.setObjectName("totalOrders")
         self.Welcome_12 = QtWidgets.QLabel(self.tab_2)
-        self.Welcome_12.setGeometry(QtCore.QRect(30, 500, 221, 71))
+        self.Welcome_12.setGeometry(QtCore.QRect(30, 420, 221, 71))
         font = QtGui.QFont()
         font.setFamily("Calibri")
         font.setPointSize(48)
@@ -306,12 +316,33 @@ class Ui_Dialog(object):
         self.Welcome_12.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.Welcome_12.setObjectName("Welcome_12")
         self.quantity = QtWidgets.QLineEdit(self.tab_2)
-        self.quantity.setGeometry(QtCore.QRect(250, 510, 341, 51))
-        self.quantity.setStyleSheet("QLineEdit{\n"
+        self.quantity.setGeometry(QtCore.QRect(340, 430, 301, 51))
+        self.quantity.setStyleSheet("\n"
+"QLineEdit{\n"
 "    border-radius: 20px;\n"
+"    font: 700 12pt \"Calibri\";\n"
 "    border-color:rgb(0, 0, 0);\n"
+"    text-align: center;\n"
 "}")
         self.quantity.setObjectName("quantity")
+        self.itemPrice = QtWidgets.QLineEdit(self.tab_2)
+        self.itemPrice.setGeometry(QtCore.QRect(340, 540, 301, 51))
+        self.itemPrice.setStyleSheet("\n"
+"QLineEdit{\n"
+"    border-radius: 20px;\n"
+"    font: 700 12pt \"Calibri\";\n"
+"    border-color:rgb(0, 0, 0);\n"
+"    text-align: center;\n"
+"}")
+        self.itemPrice.setObjectName("itemPrice")
+        self.Welcome_13 = QtWidgets.QLabel(self.tab_2)
+        self.Welcome_13.setGeometry(QtCore.QRect(40, 530, 221, 71))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(48)
+        self.Welcome_13.setFont(font)
+        self.Welcome_13.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.Welcome_13.setObjectName("Welcome_13")
         self.label_3.raise_()
         self.ordersMobile.raise_()
         self.Welcome_5.raise_()
@@ -327,6 +358,8 @@ class Ui_Dialog(object):
         self.totalOrders.raise_()
         self.Welcome_12.raise_()
         self.quantity.raise_()
+        self.itemPrice.raise_()
+        self.Welcome_13.raise_()
         self.tabWidget.addTab(self.tab_2, "")
         self.tab_3 = QtWidgets.QWidget()
         self.tab_3.setObjectName("tab_3")
@@ -354,10 +387,14 @@ class Ui_Dialog(object):
         self.signup_button_5.setObjectName("signup_button_5")
         self.ordersName_2 = QtWidgets.QLineEdit(self.tab_3)
         self.ordersName_2.setGeometry(QtCore.QRect(320, 60, 341, 51))
-        self.ordersName_2.setStyleSheet("QLineEdit{\n"
+        self.ordersName_2.setStyleSheet("\n"
+"QLineEdit{\n"
 "    border-radius: 20px;\n"
+"    font: 700 12pt \"Calibri\";\n"
 "    border-color:rgb(0, 0, 0);\n"
+"    text-align: center;\n"
 "}")
+        self.ordersName_2.setText("")
         self.ordersName_2.setObjectName("ordersName_2")
         self.signup_button_6 = QtWidgets.QPushButton(self.tab_3)
         self.signup_button_6.setGeometry(QtCore.QRect(580, 140, 141, 51))
@@ -446,7 +483,7 @@ class Ui_Dialog(object):
         item = self.today.horizontalHeaderItem(1)
         item.setText(_translate("Dialog", "Quantitiy "))
         item = self.today.horizontalHeaderItem(2)
-        item.setText(_translate("Dialog", "Provider"))
+        item.setText(_translate("Dialog", "Price"))
         item = self.missing.horizontalHeaderItem(0)
         item.setText(_translate("Dialog", "Drug name"))
         item = self.missing.horizontalHeaderItem(1)
@@ -467,6 +504,7 @@ class Ui_Dialog(object):
         item = self.orderTable.horizontalHeaderItem(1)
         item.setText(_translate("Dialog", "Quantitiy "))
         self.Welcome_12.setText(_translate("Dialog", "<html><head/><body><p><span style=\" font-size:24pt; color:#ffffff;\">Order quantity</span></p></body></html>"))
+        self.Welcome_13.setText(_translate("Dialog", "<html><head/><body><p><span style=\" font-size:24pt; color:#ffffff;\">Item price</span></p></body></html>"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("Dialog", "Orders"))
         self.Welcome_10.setText(_translate("Dialog", "<html><head/><body><p><span style=\" font-size:24pt; color:#ffffff;\">Drugs available</span></p></body></html>"))
         self.signup_button_5.setText(_translate("Dialog", "Print report"))
