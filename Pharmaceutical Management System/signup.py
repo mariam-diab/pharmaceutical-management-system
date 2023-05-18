@@ -56,7 +56,8 @@ class SignupDialog(QDialog):
             mydatabase.mycursor.execute(query, values)
             mydatabase.db.commit()
             QMessageBox.information(self, "Signup Success", "User successfully registered")
-            self.close()
+            self.open_login()
+
     #opens login widget
     def open_login(self):
         self.login_dialog = login.LoginDialog()
